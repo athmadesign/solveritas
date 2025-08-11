@@ -3490,7 +3490,7 @@ h6 {
 }
 @media (min-width: 1200px) {
   .topbar-one {
-    padding: 28px 45px;
+    padding: 10px 45px;
   }
 }
 .topbar-one__inner {
@@ -3540,12 +3540,12 @@ h6 {
   margin-left: 59px;
 }
 .topbar-one__info__icon {
-  font-size: 17px;
+  font-size: 14px;
   color: var(--eolimn-base, #60AC45);
   position: relative;
   margin-right: 15px;
-  width: 43px;
-  height: 43px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: var(--eolimn-white, #fff);
   display: flex;
