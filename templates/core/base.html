@@ -1,0 +1,248 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!-- language -->
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="bracket-web">
+    <meta name="description" content="We present you Eolimn multipurpose ecology & solar energy HTML template. It can be used for all Eco-Friendly power services, such as solar farm websites, solar panels shops, green energy, renewable energy, ecology and all other ecology businesses and websites.">
+
+    <!-- ======== Page title ============ -->
+    <title>Solveritas | {% block title %}{% endblock title %}</title>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="{% static "images/favicons/favicon-180x180.png" %}" type="image/x-icon">
+    <link rel="favicon-180x180" sizes="180x180" href="{% static "images/favicons/favicon-180x180.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "images/favicons/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "images/favicons/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "images/favicons/site.webmanifest" %}">
+
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,400i,500,500i,600,600i,700,700i,800,900%7CInter:400,400i,500,500i,600,600i,700,700i,800&amp;subset=latin,latin-ext" rel="stylesheet">
+
+
+    <!-- ===========  All Stylesheet ================= -->
+    <!--  Bootstrap css plugins -->
+    <link rel="stylesheet" href="{% static "vendors/bootstrap/css/bootstrap.min.css" %}">
+    <!--  bootstrap-select css plugins -->
+    <link rel="stylesheet" href="{% static "vendors/bootstrap-select/bootstrap-select.min.css" %}">
+    <!--  animate css plugins -->
+    <link rel="stylesheet" href="{% static "vendors/animate/animate.min.css" %}">
+    <!--  fontawesome css plugins -->
+    <link rel="stylesheet" href="{% static "vendors/fontawesome/css/all.min.css" %}">
+    <!--  jquery-ui css plugins -->
+    <link rel="stylesheet" href="{% static "vendors/jquery-ui/jquery-ui.css" %}">
+    <!--  jarallax css plugins -->
+    <link rel="stylesheet" href="{% static "vendors/jarallax/jarallax.css" %}">
+    <!--  magnific-popup css plugins -->
+    <link rel="stylesheet" href="{% static "vendors/jquery-magnific-popup/jquery.magnific-popup.css" %}">
+    <!--  nouislider css plugins -->
+    <link rel="stylesheet" href="{% static "vendors/nouislider/nouislider.min.css" %}">
+    <!--  nouislider css plugins -->
+    <link rel="stylesheet" href="{% static "vendors/nouislider/nouislider.pips.css" %}">
+    <!--  nouislider css plugins -->
+    <link rel="stylesheet" href="{% static "vendors/eolimn-icons/style.css" %}">
+    <!--  slider css plugins -->
+    <link rel="stylesheet" href="{% static "vendors/owl-carousel/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "vendors/owl-carousel/css/owl.theme.default.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "vendors/slick-carousel/slick.css" %}">
+    <link rel="stylesheet" href="{% static "vendors/slick-carousel/slick-theme.css" %}">
+    <!-- template styles -->
+    <link rel="stylesheet" href="{% static "css/eolimn.css" %}">
+</head>
+
+<body class="custom-cursor">
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <!-- Preloader Start-->
+    <div class="preloader">
+        <div class="preloader__image" style="background-image: url({% static "images/loader.png" %});"></div>
+    </div>
+    <!-- Preloader End-->
+
+    <div class="page-wrapper">
+        
+
+       {% include "partial/nav.html" %}
+
+        {% block content %}
+        
+        {% endblock content %}
+
+       {% include "partial/footer.html" %}
+
+
+        
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="header-right-sidebar">
+        <div class="header-right-sidebar__overlay header-right-sidebar__toggler"></div>
+        <div class="header-right-sidebar__content" style="background-image: url({% static "images/shapes/footer-bg-1-1.png" %});">
+            <span class="header-right-sidebar__close header-right-sidebar__toggler"><i class="fa fa-times"></i></span>
+            <div class="header-right-sidebar__logo-box">
+                <a href="index.html" aria-label="logo image">
+                    <img src="images/logo-light.png" width="155" alt="eolimn">
+                </a>
+            </div>
+            <div class="header-right-sidebar__container">
+                <div class="header-right-sidebar__container__about wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                    <h3 class="header-right-sidebar__container__title">future of solar energy renewable energy solutions</h3>
+                    <p class="header-right-sidebar__container__text">We drive the transition to more sustainable, reliable, and affordable energy systems. With our innovative technologies, we energize society, that’s our aim! The increase in extreme weather events. How can we meet the growing demand for electricity</p>
+                </div>
+                <div class="header-right-sidebar__container__contact">
+                    <h3 class="header-right-sidebar__container__title">Contact Us</h3>
+                    <ul class="header-right-sidebar__container__list list-unstyled">
+                        <li class="header-right-sidebar__container__list__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                            <div class="header-right-sidebar__container__icon">
+                                <i class="icon-email"></i>
+                            </div>
+                            <div class="header-right-sidebar__container__list__content">
+                                <span class="header-right-sidebar__container__list__title">send email</span>
+                                <a href="#">info@company.com</a>
+                            </div>
+                        </li>
+                        <li class="header-right-sidebar__container__list__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
+                            <div class="header-right-sidebar__container__icon">
+                                <i class="icon-telephone"></i>
+                            </div>
+                            <div class="header-right-sidebar__container__list__content">
+                                <span class="header-right-sidebar__container__list__title">call agent</span>
+                                <a href="tel:+91-123-654-900">+91 123 654 900</a>
+                            </div>
+                        </li>
+                        <li class="header-right-sidebar__container__list__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='700ms'>
+                            <div class="header-right-sidebar__container__icon">
+                                <i class="icon-clock"></i>
+                            </div>
+                            <div class="header-right-sidebar__container__list__content">
+                                <span class="header-right-sidebar__container__list__title">opening time</span>
+                                <p>Hours: Mon-Fri: 8am – 7pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-right-sidebar__container__newsletter-box wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='900ms'>
+                    <h3 class="header-right-sidebar__container__title">get notification</h3>
+                    <form action="#" data-url="MAILCHIMP_FORM_URL" class="newsletter-box mc-form">
+                        <input type="email" name="EMAIL" placeholder="Email">
+                        <button type="submit" class="eolimn-btn eolimn-btn--base">subscribe now</button>
+                    </form>
+                    <div class="mc-form__response"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="{% static "images/logo-light.png" %}" width="155" alt="logo"></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:needhelp@eolimn.com">needhelp@eolimn.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:666-888-0000">666 888 0000</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__social">
+                <a href="https://facebook.com/"><i class="icon-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/"><i class="icon-twitter" aria-hidden="true"></i></a>
+                <a href="https://instagram.com/"><i class="icon-social-media" aria-hidden="true"></i></a>
+                <a href="https://youtube.com/"><i class="icon-youtube" aria-hidden="true"></i></a>
+            </div><!-- /.mobile-nav__social -->
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
+            <form role="search" method="get" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here...">
+                <button type="submit" aria-label="search submit" class="eolimn-btn eolimn-btn--base">
+                    <span><i class="icon-search"></i></span>
+                </button>
+            </form>
+        </div>
+        <!-- /.search-popup__content -->
+    </div>
+    <!-- /.search-popup -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__text">back top</span>
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    </a>
+
+
+    <!--  ALl JS Plugins =====================
+        ====================================== -->
+    <!--  jquery-3.7.0 js plugins -->
+    <script src="{% static "vendors/jquery/jquery-3.7.0.min.js" %}"></script>
+    <!--  Bootstrap js plugins -->
+    <script src="{% static "vendors/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "vendors/bootstrap-select/bootstrap-select.min.js" %}"></script>
+    <!--  jarallax js plugins -->
+    <script src="{% static "vendors/jarallax/jarallax.min.js" %}"></script>
+    <!--  jquery-ui js plugins -->
+    <script src="{% static "vendors/jquery-ui/jquery-ui.js" %}"></script>
+    <!--  jquery-ajaxchimp js plugins -->
+    <script src="{% static "vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js" %}"></script>
+    <!--  jquery-appear js plugins -->
+    <script src="{% static "vendors/jquery-appear/jquery.appear.min.js" %}"></script>
+    <!-- jquery-circle-progress js plugins -->
+    <script src="{% static "vendors/jquery-circle-progress/jquery.circle-progress.min.js" %}"></script>
+    <!--  magnific-popup js plugins -->
+    <script src="{% static "vendors/jquery-magnific-popup/jquery.magnific-popup.min.js" %}"></script>
+    <!--  validate js plugins -->
+    <script src="{% static "vendors/jquery-validate/jquery.validate.min.js" %}"></script>
+    <!--  nouislider js plugins -->
+    <script src="{% static "vendors/nouislider/nouislider.min.js" %}"></script>
+    <!--  wnumb js plugins -->
+    <script src="{% static "vendors/wnumb/wNumb.min.js" %}"></script>
+    <!--  owl-carousel js plugins -->
+    <script src="{% static "vendors/owl-carousel/js/owl.carousel.min.js" %}"></script>
+    <!--  Bootstrap js plugins -->
+    <script src="{% static "vendors/wow/wow.js" %}"></script>
+    <!--  wow js plugins -->
+    <script src="{% static "vendors/imagesloaded/imagesloaded.min.js" %}"></script>
+    <!--  isotope js plugins -->
+    <script src="{% static "vendors/isotope/isotope.js" %}"></script>
+    <!--  countdown js plugins -->
+    <script src="{% static "vendors/countdown/countdown.min.js" %}"></script>
+    <!--  jquery-circleType js plugins -->
+    <script src="{% static "vendors/jquery-circleType/jquery.circleType.js" %}"></script>
+    <script src="{% static "vendors/jquery-lettering/jquery.lettering.min.js" %}"></script>
+    <script src="{% static "vendors/slick-carousel/slick.min.js" %}"></script>
+    <!-- template js -->
+    <script src="{% static "js/eolimn.js" %}"></script>
+
+</body>
+
+</html>
