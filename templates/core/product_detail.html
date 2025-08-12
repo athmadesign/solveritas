@@ -32,7 +32,7 @@
                 <h2 class="page-header__title">shop details</h2>
                 <div class="eolimn-breadcrumb">
                     <ul class="eolimn-breadcrumb__list list-unstyled">
-                        <li class="eolimn-breadcrumb__list__item"><a href="index.html">Home</a></li>
+                        <li class="eolimn-breadcrumb__list__item"><a href="{% url "home" %}">Home</a></li>
                         <li class="eolimn-breadcrumb__list__item"><span>shop details</span></li>
                     </ul>
                 </div>
@@ -53,14 +53,7 @@
                                 <h3 class="product-details__title">Water Filtration Systems</h3>
                                 <div class="product-details__price">$69</div>
                             </div>
-                            <div class="product-details__review wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <a href="product-details.html">(3 customer reviews)</a>
-                            </div>
+                            
                             <div class="product-details__divider"></div>
                             <div class="product-details__excerpt wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
                                 <p class="product-details__excerpt-text1">Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque neque.</p>
@@ -77,13 +70,13 @@
                                 <a href="cart.html" class="eolimn-btn eolimn-btn--base"> ADD TO CART <span class="product-details__buttons__icon"> <i class="icon-cart"></i> </span></a>
                                 <a href="cart.html" class="eolimn-btn">ADD TO wishlist</a>
                             </div>
-                            <div class="product-details__socials wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
+                            {% comment %} <div class="product-details__socials wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
                                 <h4 class="product-details__socials__title">share with friends :</h4>
                                 <a href="https://facebook.com/"><i class="icon-facebook" aria-hidden="true"></i></a>
                                 <a href="https://twitter.com/"><i class="icon-twitter" aria-hidden="true"></i></a>
                                 <a href="https://instagram.com/"><i class="icon-social-media" aria-hidden="true"></i></a>
                                 <a href="https://youtube.com/"><i class="icon-youtube" aria-hidden="true"></i></a>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                     </div>
                 </div>

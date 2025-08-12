@@ -10853,7 +10853,7 @@ body.megamenu-popup-active .mobile-nav__content {
   width: 100%;
   height: 100%;
   content: "";
-  background: linear-gradient(99.56deg, #1F2120 20.83%, rgba(31, 33, 32, 0.697457) 43.15%, rgba(31, 33, 32, 0) 70.83%);
+  background: linear-gradient(99.56deg, #1F2120 0.1%, rgba(31, 33, 32, 0.697457) 15.15%, rgba(31, 33, 32, 0) 90.83%);
 }
 .main-slider-one__content {
   position: relative;

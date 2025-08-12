@@ -32,7 +32,7 @@
                 <h2 class="page-header__title">our shop</h2>
                 <div class="eolimn-breadcrumb">
                     <ul class="eolimn-breadcrumb__list list-unstyled">
-                        <li class="eolimn-breadcrumb__list__item"><a href="index.html">Home</a></li>
+                        <li class="eolimn-breadcrumb__list__item"><a href="{% url "home" %}">Home</a></li>
                         <li class="eolimn-breadcrumb__list__item"><span>our shop</span></li>
                     </ul>
                 </div>
@@ -101,7 +101,7 @@
                                         </div>
                                         <div class="product__item__btn">
                                             <a href="cart.html"><i class="far fa-heart"></i></a>
-                                            <a href="{% url "product-detail" %}"><i class="fas fa-eye"></i></a>
+                                            <a href="{% url "product-detail" product.slug %}"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
                                     <div class="product__item__content">
