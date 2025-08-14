@@ -31,8 +31,8 @@
   }
 
   // Date Picker
-  if ($(".eolimn-datepicker").length) {
-    $(".eolimn-datepicker").each(function () {
+  if ($(".solveritas-datepicker").length) {
+    $(".solveritas-datepicker").each(function () {
       $(this).datepicker();
     });
   }
@@ -390,8 +390,8 @@
   }
 
   //accrodion
-  if ($(".eolimn-accrodion").length) {
-    var accrodionGrp = $(".eolimn-accrodion");
+  if ($(".solveritas-accrodion").length) {
+    var accrodionGrp = $(".solveritas-accrodion");
     accrodionGrp.each(function () {
       var accrodionName = $(this).data("grp-name");
       var Self = $(this);
@@ -404,10 +404,10 @@
           .find(".accrodion-title")
           .on("click", function () {
             if ($(this).parent().hasClass("active") === false) {
-              $(".eolimn-accrodion." + accrodionName)
+              $(".solveritas-accrodion." + accrodionName)
                 .find(".accrodion")
                 .removeClass("active");
-              $(".eolimn-accrodion." + accrodionName)
+              $(".solveritas-accrodion." + accrodionName)
                 .find(".accrodion")
                 .find(".accrodion-content")
                 .slideUp();
@@ -489,9 +489,9 @@
 
   function thmOwlInit() {
     // owl slider
-    let eolimnowlCarousel = $(".eolimn-owl__carousel");
-    if (eolimnowlCarousel.length) {
-      eolimnowlCarousel.each(function () {
+    let solveritasowlCarousel = $(".solveritas-owl__carousel");
+    if (solveritasowlCarousel.length) {
+      solveritasowlCarousel.each(function () {
         let elm = $(this);
         let options = elm.data("owl-options");
         let thmOwlCarousel = elm.owlCarousel(
@@ -502,9 +502,9 @@
         });
       });
     }
-    let eolimnowlCarouselNav = $(".eolimn-owl__carousel--custom-nav");
-    if (eolimnowlCarouselNav.length) {
-      eolimnowlCarouselNav.each(function () {
+    let solveritasowlCarouselNav = $(".solveritas-owl__carousel--custom-nav");
+    if (solveritasowlCarouselNav.length) {
+      solveritasowlCarouselNav.each(function () {
         let elm = $(this);
         let owlNavPrev = elm.data("owl-nav-prev");
         let owlNavNext = elm.data("owl-nav-next");
@@ -520,9 +520,9 @@
       });
     }
 
-    let eolimnowlCarouselWithCounter = $(".eolimn-owl__carousel--with-counter");
-    if (eolimnowlCarouselWithCounter.length) {
-      eolimnowlCarouselWithCounter.each(function () {
+    let solveritasowlCarouselWithCounter = $(".solveritas-owl__carousel--with-counter");
+    if (solveritasowlCarouselWithCounter.length) {
+      solveritasowlCarouselWithCounter.each(function () {
         let elm = $(this);
         let options = elm.data("owl-options");
 
@@ -539,15 +539,15 @@
               return;
             }
             elm.append(
-              '<div class="eolimn-owl__carousel__counter"><span class="eolimn-owl__carousel__counter__total"></span> <span class="eolimn-owl__carousel__counter__current"></span></div>'
+              '<div class="solveritas-owl__carousel__counter"><span class="solveritas-owl__carousel__counter__total"></span> <span class="solveritas-owl__carousel__counter__current"></span></div>'
             );
             elm
-              .find(".eolimn-owl__carousel__counter__current")
+              .find(".solveritas-owl__carousel__counter__current")
               .text(
                 addLeadingZero(carousel.relative(carousel.current()) + 1, 2)
               );
             elm
-              .find(".eolimn-owl__carousel__counter__total")
+              .find(".solveritas-owl__carousel__counter__total")
               .text(addLeadingZero(carouselCount, 2));
           })
           .owlCarousel(
@@ -556,7 +556,7 @@
           .on("changed.owl.carousel", function (event) {
             var carousel = event.relatedTarget;
             elm
-              .find(".eolimn-owl__carousel__counter__current")
+              .find(".solveritas-owl__carousel__counter__current")
               .text(
                 addLeadingZero(carousel.relative(carousel.current()) + 1, 2)
               );
@@ -576,7 +576,7 @@
 
   function thmSlickInit() {
     // slick slider
-    let hiredotsslickCarousel = $(".eolimn-slick__carousel");
+    let hiredotsslickCarousel = $(".solveritas-slick__carousel");
     if (hiredotsslickCarousel.length) {
       hiredotsslickCarousel.each(function () {
         let elm = $(this);
@@ -688,9 +688,9 @@
   stickyMenuUpScroll($(".sticky-header--normal"), "active");
 
   //Strech Column
-  function eolimn_stretch() {
+  function solveritas_stretch() {
     var i = $(window).width();
-    $(".row .eolimn-stretch-element-inside-column").each(function () {
+    $(".row .solveritas-stretch-element-inside-column").each(function () {
       var $this = $(this),
         row = $this.closest(".row"),
         cols = $this.closest('[class^="col-"]'),
@@ -719,9 +719,9 @@
       $this.css(styles);
     });
   }
-  eolimn_stretch();
+  solveritas_stretch();
 
-  function eolimn_cuved_circle() {
+  function solveritas_cuved_circle() {
     let circleTypeElm = $(".curved-circle--item");
     if (circleTypeElm.length) {
       circleTypeElm.each(function () {
@@ -835,7 +835,7 @@
       });
     }
 
-    eolimn_cuved_circle();
+    solveritas_cuved_circle();
   });
 
   $(window).on("scroll", function () {
@@ -862,6 +862,6 @@
   });
 
   $(window).on("resize", function () {
-    eolimn_stretch();
+    solveritas_stretch();
   });
 })(jQuery);

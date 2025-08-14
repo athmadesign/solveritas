@@ -30,10 +30,10 @@
             <!-- Sliding section End -->
             <div class="container">
                 <h2 class="page-header__title">shop details</h2>
-                <div class="eolimn-breadcrumb">
-                    <ul class="eolimn-breadcrumb__list list-unstyled">
-                        <li class="eolimn-breadcrumb__list__item"><a href="{% url "home" %}">Home</a></li>
-                        <li class="eolimn-breadcrumb__list__item"><span>shop details</span></li>
+                <div class="solveritas-breadcrumb">
+                    <ul class="solveritas-breadcrumb__list list-unstyled">
+                        <li class="solveritas-breadcrumb__list__item"><a href="{% url "home" %}">Home</a></li>
+                        <li class="solveritas-breadcrumb__list__item"><span>shop details</span></li>
                     </ul>
                 </div>
             </div>
@@ -44,19 +44,20 @@
                 <div class="row gutter-y-30 align-items-center">
                     <div class="col-lg-6 col-xl-6">
                         <div class="product-details__img wow fadeInLeft" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                            <img src="{% static "images/products/product-d-1-1.png" %}" alt="eolimn image">
+                            <img src="{% static "images/products/product-d-1-1.png" %}" alt="solveritas image">
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-6">
                         <div class="product-details__content">
                             <div class="product-details__top wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                <h3 class="product-details__title">Water Filtration Systems</h3>
-                                <div class="product-details__price">$69</div>
+                                <h3 class="product-details__title">{{ product.name }}</h3>
+                                
                             </div>
+                            <div class="product-details__price">${{ product.price }}</div>
                             
                             <div class="product-details__divider"></div>
                             <div class="product-details__excerpt wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                <p class="product-details__excerpt-text1">Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque neque.</p>
+                                <p class="product-details__excerpt-text1">{{ product.description }}</p>
                             </div><!-- /.excerp-text -->
                             <div class="product-details__quantity wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
                                 <h3 class="product-details__quantity-title">Quantity</h3>
@@ -67,8 +68,8 @@
                                 </div>
                             </div>
                             <div class="product-details__buttons wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                <a href="cart.html" class="eolimn-btn eolimn-btn--base"> ADD TO CART <span class="product-details__buttons__icon"> <i class="icon-cart"></i> </span></a>
-                                <a href="cart.html" class="eolimn-btn">ADD TO wishlist</a>
+                                <a href="cart.html" class="solveritas-btn solveritas-btn--base"> ADD TO CART <span class="product-details__buttons__icon"> <i class="icon-cart"></i> </span></a>
+                                <a href="cart.html" class="solveritas-btn">ADD TO wishlist</a>
                             </div>
                             {% comment %} <div class="product-details__socials wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
                                 <h4 class="product-details__socials__title">share with friends :</h4>
@@ -87,11 +88,11 @@
                 </div>
 
                 <div class="product-details__comment">
-                    <h3 class="product-details__comment-title wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>02 Reviews, eolimn</h3>
+                    <h3 class="product-details__comment-title wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>02 Reviews, solveritas</h3>
                     <ul class="list-unstyled product-details__comment__list">
                         <li class="product-details__comment__card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
                             <div class="product-details__comment__card__image">
-                                <img src="{% static "images/blog/blog-comment-1-1.jpg" %}" alt="eolimn">
+                                <img src="{% static "images/blog/blog-comment-1-1.jpg" %}" alt="solveritas">
                             </div>
                             <div class="product-details__comment__card__content">
                                 <div class="product-details__comment__card__top">
@@ -112,7 +113,7 @@
                         </li>
                         <li class="product-details__comment__card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
                             <div class="product-details__comment__card__image">
-                                <img src="{% static "images/blog/blog-comment-1-2.jpg" %}" alt="eolimn">
+                                <img src="{% static "images/blog/blog-comment-1-2.jpg" %}" alt="solveritas">
                             </div>
                             <div class="product-details__comment__card__content">
                                 <div class="product-details__comment__card__top">
@@ -159,7 +160,7 @@
                             </div>
 
                             <div class="form-one__control form-one__control--full">
-                                <button type="submit" class="eolimn-btn eolimn-btn--base">post comment</button>
+                                <button type="submit" class="solveritas-btn solveritas-btn--base">post comment</button>
                             </div>
                         </div>
                     </form>

@@ -53,12 +53,12 @@ body {
   margin-left: 0;
 }
 
-.eolimn-btn {
+.solveritas-btn {
   display: inline-flex;
   align-items: center;
   gap: 7px;
 }
-.eolimn-btn i {
+.solveritas-btn i {
   transform: rotateY(-180deg);
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .about-one__funfact::after,
-.eolimn-owl__carousel--basic-nav.owl-carousel .owl-nav button span,
+.solveritas-owl__carousel--basic-nav.owl-carousel .owl-nav button span,
 .cta__form::after,
 .faq-page__accordion-two .accrodion-title__icon {
   transform: rotateY(-180deg);
@@ -107,7 +107,7 @@ body {
   transform: rotate(90deg);
 }
 
-.team-one .eolimn-btn {
+.team-one .solveritas-btn {
   display: inline-flex;
 }
 
@@ -144,4 +144,4 @@ body {
     display: none !important;
   }
 }
-/*# sourceMappingURL=eolimn-custom-rtl.css.map */
+/*# sourceMappingURL=solveritas-custom-rtl.css.map */

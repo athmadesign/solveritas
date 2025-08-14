@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="bracket-web">
-    <meta name="description" content="We present you Eolimn multipurpose ecology & solar energy HTML template. It can be used for all Eco-Friendly power services, such as solar farm websites, solar panels shops, green energy, renewable energy, ecology and all other ecology businesses and websites.">
+    <meta name="description" content="We present you solveritas multipurpose ecology & solar energy HTML template. It can be used for all Eco-Friendly power services, such as solar farm websites, solar panels shops, green energy, renewable energy, ecology and all other ecology businesses and websites.">
 
     <!-- ======== Page title ============ -->
     <title>Solveritas | {% block title %}{% endblock title %}</title>
@@ -27,6 +27,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,400i,500,500i,600,600i,700,700i,800,900%7CInter:400,400i,500,500i,600,600i,700,700i,800&amp;subset=latin,latin-ext" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
     <!-- ===========  All Stylesheet ================= -->
@@ -49,7 +52,7 @@
     <!--  nouislider css plugins -->
     <link rel="stylesheet" href="{% static "vendors/nouislider/nouislider.pips.css" %}">
     <!--  nouislider css plugins -->
-    <link rel="stylesheet" href="{% static "vendors/eolimn-icons/style.css" %}">
+    <link rel="stylesheet" href="{% static "vendors/solveritas-icons/style.css" %}">
     <!--  slider css plugins -->
     <link rel="stylesheet" href="{% static "vendors/owl-carousel/css/owl.carousel.min.css" %}">
     <link rel="stylesheet" href="{% static "vendors/owl-carousel/css/owl.theme.default.min.css" %}">
@@ -57,7 +60,7 @@
     <link rel="stylesheet" href="{% static "vendors/slick-carousel/slick.css" %}">
     <link rel="stylesheet" href="{% static "vendors/slick-carousel/slick-theme.css" %}">
     <!-- template styles -->
-    <link rel="stylesheet" href="{% static "css/eolimn.css" %}">
+    <link rel="stylesheet" href="{% static "css/solveritas.css" %}">
 </head>
 
 <body class="custom-cursor">
@@ -95,7 +98,7 @@
             <span class="header-right-sidebar__close header-right-sidebar__toggler"><i class="fa fa-times"></i></span>
             <div class="header-right-sidebar__logo-box">
                 <a href="index.html" aria-label="logo image">
-                    <img src="{% static "images/logo-light.png" %}" width="155" alt="eolimn">
+                    <img src="{% static "images/logo-light.png" %}" width="155" alt="solveritas">
                 </a>
             </div>
             <div class="header-right-sidebar__container">
@@ -112,7 +115,7 @@
                             </div>
                             <div class="header-right-sidebar__container__list__content">
                                 <span class="header-right-sidebar__container__list__title">send email</span>
-                                <a href="#">info@company.com</a>
+                                <a href="#">solveritasglobal@gmail.com</a>
                             </div>
                         </li>
                         <li class="header-right-sidebar__container__list__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
@@ -135,14 +138,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="header-right-sidebar__container__newsletter-box wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='900ms'>
-                    <h3 class="header-right-sidebar__container__title">get notification</h3>
-                    <form action="#" data-url="MAILCHIMP_FORM_URL" class="newsletter-box mc-form">
-                        <input type="email" name="EMAIL" placeholder="Email">
-                        <button type="submit" class="eolimn-btn eolimn-btn--base">subscribe now</button>
-                    </form>
-                    <div class="mc-form__response"></div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -163,7 +159,7 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@eolimn.com">needhelp@eolimn.com</a>
+                    <a href="mailto:needhelp@solveritas.com">needhelp@solveritas.com</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
@@ -186,7 +182,7 @@
         <div class="search-popup__content">
             <form role="search" method="get" class="search-popup__form" action="#">
                 <input type="text" id="search" placeholder="Search Here...">
-                <button type="submit" aria-label="search submit" class="eolimn-btn eolimn-btn--base">
+                <button type="submit" aria-label="search submit" class="solveritas-btn solveritas-btn--base">
                     <span><i class="icon-search"></i></span>
                 </button>
             </form>
@@ -194,6 +190,60 @@
         <!-- /.search-popup__content -->
     </div>
     <!-- /.search-popup -->
+
+    <!-- Floating Side Contact Bar -->
+<div id="side-contact">
+    <div id="contact-tab">
+        <i class="fas fa-comments"></i>
+        <span>CONTACT US</span>
+    </div>
+    <div id="contact-panel">
+        <a href="tel:+8613788918712" class="contact-item">
+            <i class="fab fa-weixin"></i> WeChat 
+        </a>
+
+        <a href="mailto:jane@chnland-solar.com" class="contact-item">
+            <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="skype:live:your_skype_id?chat" class="contact-item">
+            <i class="fab fa-skype"></i> Skype
+        </a>
+        
+        <a href="#" class="contact-item">
+            <i class="fab fa-qq"></i> QQ
+        </a>
+        <a href="https://wa.me/917356568224" target="_blank" class="contact-item">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+            <div class="qr-popup">
+                <img src="{% static "whatsapp-qr.png" %}" alt="WhatsApp QR">
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+    <!-- Floating WhatsApp Contact Widget -->
+<div id="contact-widget">
+    <div id="contact-toggle">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M2 2v20l4-4h16V2H2zm18 12H5.17L4 15.17V4h16v10z"/>
+  </svg>
+  Leave a Message
+</div>
+    
+    <div id="contact-form">
+        {% comment %} <h4>Leave a message</h4> {% endcomment %}
+        <form id="whatsappForm">
+            <input type="text" id="name" placeholder="Your Name (required)" required>
+            <input type="email" id="email" placeholder="Your Email (required)" required>
+            <input type="text" id="phone" placeholder="Your Phone">
+            <textarea id="message" placeholder="Please fill in the details" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
         <span class="scroll-to-top__text">back top</span>
@@ -241,9 +291,49 @@
     <script src="{% static "vendors/jquery-lettering/jquery.lettering.min.js" %}"></script>
     <script src="{% static "vendors/slick-carousel/slick.min.js" %}"></script>
     <!-- template js -->
-    <script src="{% static "js/eolimn.js" %}"></script>
+    <script src="{% static "js/solveritas.js" %}"></script>
 
-    
+    <script>
+document.getElementById('contact-toggle').addEventListener('click', function() {
+    const form = document.getElementById('contact-form');
+    form.style.display = (form.style.display === 'block') ? 'none' : 'block';
+});
+
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let phone = document.getElementById('phone').value;
+    let message = document.getElementById('message').value;
+
+    let fullMessage = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0A%0AMessage:%0A${message}`;
+    let whatsappURL = `https://wa.me/917356568224?text=${fullMessage}`;
+
+    window.open(whatsappURL, '_blank');
+});
+</script>
+
+<script>
+const tab = document.getElementById('contact-tab');
+const panel = document.getElementById('contact-panel');
+
+tab.addEventListener('click', () => {
+    tab.style.display = 'none';
+    panel.style.display = 'block';
+    setTimeout(() => {
+        panel.style.transform = 'translateX(0)';
+    }, 10);
+});
+
+panel.addEventListener('mouseleave', () => {
+    panel.style.transform = 'translateX(100%)';
+    setTimeout(() => {
+        panel.style.display = 'none';
+        tab.style.display = 'block';
+    }, 400);
+});
+</script>
 
 </body>
 
