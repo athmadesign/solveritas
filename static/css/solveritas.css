@@ -436,7 +436,7 @@ h6 {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    max-width: 1350px;
   }
 }
 .row {
@@ -10671,68 +10671,7 @@ body.megamenu-popup-active .mobile-nav__content {
   background-color: #9cc1aa;
 }
 
-/*--------------------------------------------------------------
-# Client Carousel
---------------------------------------------------------------*/
-.client-carousel {
-  padding: 80px 0;
-}
-@media (min-width: 992px) {
-  .client-carousel {
-    padding: 102px 0;
-  }
-}
-.client-carousel__one__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 500ms ease;
-  position: relative;
-  background-color: transparent;
-  border-radius: 50px;
-  max-width: 110px;
-  height: 80px;
-}
-.client-carousel__one__item img {
-  transition: all 500ms ease;
-  max-width: 100%;
-  width: auto !important;
-  cursor: pointer;
-}
-.client-carousel__one__item:hover .client-carousel__one__hover-image {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  display: block;
-  visibility: visible;
-  opacity: 1;
-}
-.client-carousel__one__item:hover .client-carousel__one__image {
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(100%);
-}
-.client-carousel__one__hover-image {
-  transition: all 500ms ease;
-  display: block;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  visibility: hidden;
-  opacity: 0;
-}
-.client-carousel__one__image {
-  transition: 500ms;
-  max-width: 122px;
-  width: auto;
-  transition: all 500ms ease;
-}
+
 
 /*--------------------------------------------------------------
 # Hero Slider
@@ -13195,7 +13134,7 @@ body.megamenu-popup-active .mobile-nav__content {
   margin-right: auto;
   max-width: 1600px;
   padding-bottom: 110px;
-  margin-left: -40px;
+  margin-left: auto;
 }
 @media (max-width: 1600px) {
   .service-one__inner {

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'products',
     'ckeditor',
     'ckeditor_uploader',
+    'blog'
 ]
 
 
@@ -69,6 +70,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'products.context_processors.menu_categories',
+                'products.context_processors.blog_categories',
             ],
         },
     },

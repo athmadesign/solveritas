@@ -8,26 +8,7 @@
 
 <section class="page-header">
             <div class="page-header__bg" style="background-image: url({% static "images/backgrounds/page-header-bg-1-1.jpg" %});"></div>
-            <!-- Sliding section Start -->
-            <div class="text-slider  wow fadeInUp" data-wow-delay="500ms">
-                <div class="text-slider__inner">
-                    <div class="text-slider__item">
-                        <div class="text-slider__item__text"><span>*</span> blog</div>
-                        <div class="text-slider__item__text"><span>*</span> blog</div>
-                        <div class="text-slider__item__text"><span>*</span> blog</div>
-                        <div class="text-slider__item__text"><span>*</span> blog</div>
-                        <div class="text-slider__item__text"><span>*</span> blog</div>
-                        <div class="text-slider__item__text"><span>*</span> blog</div>
-                        <div class="text-slider__item__text"><span>*</span> blog</div>
-                        <div class="text-slider__item__text"><span>*</span> blog</div>
-                        <div class="text-slider__item__text"><span>*</span> blog</div>
-                        <div class="text-slider__item__text"><span>*</span> blog</div>
-                        <div class="text-slider__item__text"><span>*</span> blog</div>
-                        <div class="text-slider__item__text"><span>*</span> blog</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sliding section End -->
+            
             <div class="container">
                 <h2 class="page-header__title">blog grid</h2>
                 <div class="solveritas-breadcrumb">
@@ -42,159 +23,26 @@
         <section class="blog-one blog-one--page">
             <div class="container">
                 <div class="row gutter-y-30">
-                    <div class="col-md-6 col-lg-4">
+                    {% for blog in blogs %}
+                        <div class="col-md-6 col-lg-4">
                         <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
                             <div class="blog-card__image">
-                                <a href="blog-details-right.html" class="blog-card__image__item">
-                                    <img src="{% static "images/blog/blog-1-1.png" %}" alt="cupidatat nonproident, sunt in culpa qui officia deserunt">
+                                <a href="{% url "blog_detail" blog.slug %}" class="blog-card__image__item">
+                                    <img src="{{ blog.featured_image.url }}" alt="{{blog.title}}">
                                 </a>
-                                <div class="blog-card__date"><span class="blog-card__date__day">20</span> <span class="blog-card__date__month">June</span></div>
+                                
                             </div>
                             <div class="blog-card__content">
-                                <h3 class="blog-card__title"><a href="blog-details-right.html">cupidatat nonproident, sunt in culpa qui officia deserunt</a></h3>
+                                <h3 class="blog-card__title"><a href="{% url "blog_detail" blog.slug %}">{{ blog.title }}</a></h3>
                                 <ul class="blog-card__meta list-unstyled">
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by Admin</a></li>
+                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by {{ blog.author }}</a></li>
                                     <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                            <div class="blog-card__image">
-                                <a href="blog-details-right.html" class="blog-card__image__item">
-                                    <img src="{% static "images/blog/blog-1-2.png" %}" alt="cupidatat nonproident, sunt in culpa qui officia deserunt">
-                                </a>
-                                <div class="blog-card__date"><span class="blog-card__date__day">20</span> <span class="blog-card__date__month">June</span></div>
-                            </div>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__title"><a href="blog-details-right.html">cupidatat nonproident, sunt in culpa qui officia deserunt</a></h3>
-                                <ul class="blog-card__meta list-unstyled">
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by Admin</a></li>
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                            <div class="blog-card__image">
-                                <a href="blog-details-right.html" class="blog-card__image__item">
-                                    <img src="{% static "images/blog/blog-1-3.png" %}" alt="cupidatat nonproident, sunt in culpa qui officia deserunt">
-                                </a>
-                                <div class="blog-card__date"><span class="blog-card__date__day">20</span> <span class="blog-card__date__month">June</span></div>
-                            </div>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__title"><a href="blog-details-right.html">cupidatat nonproident, sunt in culpa qui officia deserunt</a></h3>
-                                <ul class="blog-card__meta list-unstyled">
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by Admin</a></li>
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                            <div class="blog-card__image">
-                                <a href="blog-details-right.html" class="blog-card__image__item">
-                                    <img src="{% static "images/blog/blog-1-4.png" %}" alt="cupidatat nonproident, sunt in culpa qui officia deserunt">
-                                </a>
-                                <div class="blog-card__date"><span class="blog-card__date__day">20</span> <span class="blog-card__date__month">June</span></div>
-                            </div>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__title"><a href="blog-details-right.html">cupidatat nonproident, sunt in culpa qui officia deserunt</a></h3>
-                                <ul class="blog-card__meta list-unstyled">
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by Admin</a></li>
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='400ms'>
-                            <div class="blog-card__image">
-                                <a href="blog-details-right.html" class="blog-card__image__item">
-                                    <img src="{% static "images/blog/blog-1-5.png" %}" alt="cupidatat nonproident, sunt in culpa qui officia deserunt">
-                                </a>
-                                <div class="blog-card__date"><span class="blog-card__date__day">20</span> <span class="blog-card__date__month">June</span></div>
-                            </div>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__title"><a href="blog-details-right.html">cupidatat nonproident, sunt in culpa qui officia deserunt</a></h3>
-                                <ul class="blog-card__meta list-unstyled">
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by Admin</a></li>
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                            <div class="blog-card__image">
-                                <a href="blog-details-right.html" class="blog-card__image__item">
-                                    <img src="{% static "images/blog/blog-1-6.png" %}" alt="cupidatat nonproident, sunt in culpa qui officia deserunt">
-                                </a>
-                                <div class="blog-card__date"><span class="blog-card__date__day">20</span> <span class="blog-card__date__month">June</span></div>
-                            </div>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__title"><a href="blog-details-right.html">cupidatat nonproident, sunt in culpa qui officia deserunt</a></h3>
-                                <ul class="blog-card__meta list-unstyled">
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by Admin</a></li>
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                            <div class="blog-card__image">
-                                <a href="blog-details-right.html" class="blog-card__image__item">
-                                    <img src="{% static "images/blog/blog-1-7.png" %}" alt="cupidatat nonproident, sunt in culpa qui officia deserunt">
-                                </a>
-                                <div class="blog-card__date"><span class="blog-card__date__day">20</span> <span class="blog-card__date__month">June</span></div>
-                            </div>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__title"><a href="blog-details-right.html">cupidatat nonproident, sunt in culpa qui officia deserunt</a></h3>
-                                <ul class="blog-card__meta list-unstyled">
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by Admin</a></li>
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='400ms'>
-                            <div class="blog-card__image">
-                                <a href="blog-details-right.html" class="blog-card__image__item">
-                                    <img src="{% static "images/blog/blog-1-8.png" %}" alt="cupidatat nonproident, sunt in culpa qui officia deserunt">
-                                </a>
-                                <div class="blog-card__date"><span class="blog-card__date__day">20</span> <span class="blog-card__date__month">June</span></div>
-                            </div>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__title"><a href="blog-details-right.html">cupidatat nonproident, sunt in culpa qui officia deserunt</a></h3>
-                                <ul class="blog-card__meta list-unstyled">
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by Admin</a></li>
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                            <div class="blog-card__image">
-                                <a href="blog-details-right.html" class="blog-card__image__item">
-                                    <img src="{% static "images/blog/blog-1-9.png" %}" alt="cupidatat nonproident, sunt in culpa qui officia deserunt">
-                                </a>
-                                <div class="blog-card__date"><span class="blog-card__date__day">20</span> <span class="blog-card__date__month">June</span></div>
-                            </div>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__title"><a href="blog-details-right.html">cupidatat nonproident, sunt in culpa qui officia deserunt</a></h3>
-                                <ul class="blog-card__meta list-unstyled">
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by Admin</a></li>
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+                    
                     <div class="col-12">
                         <ul class="post-pagination list-unstyled justify-content-center">
                             <li><a href="#"><span class="post-pagination__icon"><i class="icon-arrow-point-to-left"></i></span></a></li>

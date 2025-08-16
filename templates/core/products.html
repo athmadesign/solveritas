@@ -36,26 +36,14 @@
                                 </form>
                             </div>
 
-                            <div class="product__price-ranger wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                <h3 class="product__sidebar--title">Filter by price</h3>
-                                <div class="price-ranger">
-                                    <div id="slider-range"></div>
-                                    <div class="ranger-min-max-block">
-                                        <input type="text" readonly class="min">
-                                        <span>-</span>
-                                        <input type="text" readonly class="max">
-                                    </div>
-                                </div>
-                            </div><!-- /.price-slider -->
+                            
 
                             <div class="product__categories wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
                                 <h3 class="product__sidebar--title">Categories</h3>
                                 <ul class="list-unstyled">
-                                    <li><a href="products.html"><i class="icon-arrow-point-to-right"></i>Kitchen Faucet</a></li>
-                                    <li><a href="products.html"><i class="icon-arrow-point-to-right"></i>Toilet Bowl</a></li>
-                                    <li><a href="products.html"><i class="icon-arrow-point-to-right"></i>Pipe Elbows</a></li>
-                                    <li><a href="products.html"><i class="icon-arrow-point-to-right"></i>Pressure Reducing</a></li>
-                                    <li><a href="products.html"><i class="icon-arrow-point-to-right"></i>Water Softeners</a></li>
+                                    {% for category in menu_categories %}
+                                    <li><a href="products.html"><i class="icon-arrow-point-to-right"></i>{{ category.name }}</a></li>
+                                    {% endfor %}
                                 </ul>
                             </div><!-- /.category-widget -->
                         </div><!-- /.shop-sidebar -->
@@ -80,7 +68,7 @@
                                 <div class="product__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
                                     <div class="product__item__img">
                                         <div class="product__item__img__item">
-                                            <img src="{{ product.image.url }}" alt="product image">
+                                            <img src="{{ product.image.url }}" alt="{{product.name}}">
                                         </div>
                                         <div class="product__item__btn">
                                             <a href="cart.html"><i class="far fa-heart"></i></a>
