@@ -5,69 +5,97 @@
 {% block title %}Products Detail{% endblock title %}
 
 {% block content %}
-
 <section class="page-header">
-            <div class="page-header__bg" style="background-image: url({% static "images/backgrounds/page-header-bg-1-1.jpg" %});"></div>
-            
-            <div class="container">
-                <h2 class="page-header__title">{{ product.name }}</h2>
-                <div class="solveritas-breadcrumb">
-                    <ul class="solveritas-breadcrumb__list list-unstyled">
-                        <li class="solveritas-breadcrumb__list__item"><a href="{% url "home" %}">Home</a></li>
-                        <li class="solveritas-breadcrumb__list__item"><span>shop details</span></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <div class="page-header__bg" style="background-image: url({% static "images/backgrounds/page-header-bg-1-1.jpg" %});"></div>
+    
+    <div class="container">
+        <h2 class="page-header__title">{{ product.name }}</h2>
+        <div class="solveritas-breadcrumb">
+            <ul class="solveritas-breadcrumb__list list-unstyled">
+                <li class="solveritas-breadcrumb__list__item"><a href="{% url "home" %}">Home</a></li>
+                <li class="solveritas-breadcrumb__list__item"><span>shop details</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-        <section class="product-details">
-            <div class="container">
-                <div class="row gutter-y-30 align-items-center">
-                    <div class="col-lg-6 col-xl-6">
-                        <div class="product-details__img wow fadeInLeft" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                            <img src="{% static "images/products/product-d-1-1.png" %}" alt="solveritas image">
-                        </div>
+<section class="product-details">
+    <div class="container">
+        <div class="row gutter-y-30 align-items-center">
+            <div class="col-lg-6 col-xl-6">
+                <div class="product-details__gallery wow fadeInLeft" data-wow-duration='1500ms' data-wow-delay='500ms'>
+                    <!-- Main image -->
+                    <div class="product-details__main-img">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" id="main-product-image">
                     </div>
-                    <div class="col-lg-6 col-xl-6">
-                        <div class="product-details__content">
-                            <div class="product-details__top wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                <h3 class="product-details__title">{{ product.name }}</h3>
-                                
-                            </div>
-                            <div class="product-details__price">${{ product.price }}</div>
-                            
-                            <div class="product-details__divider"></div>
-                            <div class="product-details__excerpt wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                <p class="product-details__excerpt-text1">{{ product.short_description }}</p>
-                            </div><!-- /.excerp-text -->
-                            
-                            <div class="product-details__buttons wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                <a 
-  href="https://wa.me/919605568224?text={{ 'Hello, I am interested in the product: ' }}{{ product.name }}{{ ' (Price: $' }}{{ product.price }}{{ '). Here is the link: ' }}{{ request.build_absolute_uri }}{{ ' Please provide more details.' | urlencode }}" 
-  target="_blank" 
-  class="solveritas-btn solveritas-btn--base"
->
-  INQUIRY 
-  <span class="product-details__buttons__icon"> 
-    <i class="fas fa-arrow-right"></i> 
-  </span>
-</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="product-details__description">
-                    <h3 class="product-details__description__title wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>product Description</h3>
-                    <p class="product-details__description__text wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>{{ product.description|safe }}</p>
                     
+                    <!-- Thumbnail gallery -->
+                    {% if product.images.all %}
+                    <div class="product-details__thumbnails">
+                        <div class="thumbnail-item {% if forloop.first %}active{% endif %}">
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="thumbnail-img">
+                        </div>
+                        {% for image in product.images.all %}
+                        <div class="thumbnail-item">
+                            <img src="{{ image.image.url }}" alt="{{ product.name }} - Image {{ forloop.counter }}" class="thumbnail-img">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                 </div>
-
-                
-
-                
             </div>
-        </section>
-        <!-- Products End -->
+            <div class="col-lg-6 col-xl-6">
+                <div class="product-details__content">
+                    <div class="product-details__top wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
+                        <h3 class="product-details__title">{{ product.name }}</h3>
+                    </div>
+                    <div class="product-details__price">${{ product.price }}</div>
+                    
+                    <div class="product-details__divider"></div>
+                    <div class="product-details__excerpt wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
+                        <p class="product-details__excerpt-text1">{{ product.short_description }}</p>
+                    </div>
+                    
+                    <div class="product-details__buttons wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
+                        <a 
+                            href="https://wa.me/919605568224?text={{ 'Hello, I am interested in the product: ' }}{{ product.name }}{{ ' (Price: $' }}{{ product.price }}{{ '). Here is the link: ' }}{{ request.build_absolute_uri }}{{ ' Please provide more details.' | urlencode }}" 
+                            target="_blank" 
+                            class="solveritas-btn solveritas-btn--base"
+                        >
+                            INQUIRY 
+                            <span class="product-details__buttons__icon"> 
+                                <i class="fas fa-arrow-right"></i> 
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-details__description">
+            <h3 class="product-details__description__title wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>Product Description</h3>
+            <p class="product-details__description__text wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>{{ product.description|safe }}</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mainImage = document.getElementById('main-product-image');
+        const thumbnails = document.querySelectorAll('.thumbnail-img');
+        
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                // Update main image
+                mainImage.src = this.src;
+                
+                // Update active thumbnail
+                document.querySelectorAll('.thumbnail-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                this.parentElement.classList.add('active');
+            });
+        });
+    });
+</script>
 
 {% endblock content %}

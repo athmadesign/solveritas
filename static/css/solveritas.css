@@ -1773,6 +1773,7 @@ h6 {
   display: block;
   position: relative;
   overflow: hidden;
+  height: 220px; /* Added fixed height */
 }
 .blog-card__image::before {
   position: absolute;
@@ -1791,7 +1792,8 @@ h6 {
 }
 .blog-card__image__item img {
   width: 100%;
-  object-fit: cover;
+  height: 100%; /* Added full height */
+  object-fit: cover; /* Ensures proper cropping */
   transform: scale(1);
   transition: all 0.5s ease-in-out;
 }
@@ -1918,6 +1920,7 @@ h6 {
   display: block;
   position: relative;
   overflow: hidden;
+  height: 220px; /* Added fixed height */
 }
 .blog-card-two__image::before {
   position: absolute;
@@ -1936,7 +1939,8 @@ h6 {
 }
 .blog-card-two__image__item img {
   width: 100%;
-  object-fit: cover;
+  height: 100%; /* Added full height */
+  object-fit: cover; /* Ensures proper cropping */
   transform: scale(1);
   transition: all 0.5s ease-in-out;
 }
@@ -2098,7 +2102,7 @@ h6 {
   }
 }
 
-/*Blog Two Style*/
+/*Blog Two Style - Updated with consistent thumbnails*/
 .blog-two {
   position: relative;
   z-index: 1;
@@ -2119,11 +2123,15 @@ h6 {
   position: relative;
   z-index: 1;
   background: var(--solveritas-white, #fff);
+  height: 100%; /* Ensures equal height */
+  display: flex;
+  flex-direction: column;
 }
 .blog-two__card__image {
   display: block;
   position: relative;
   overflow: hidden;
+  height: 220px; /* Fixed height */
 }
 .blog-two__card__image::before {
   position: absolute;
@@ -2142,10 +2150,12 @@ h6 {
 }
 .blog-two__card__image__item {
   display: block;
+  height: 100%;
 }
 .blog-two__card__image__item img {
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover; /* Ensures proper cropping */
   transform: scale(1);
   transition: all 0.5s ease-in-out;
 }
@@ -2177,6 +2187,9 @@ h6 {
 }
 .blog-two__card__content {
   padding: 30px;
+  flex: 1; /* Takes remaining space */
+  display: flex;
+  flex-direction: column;
 }
 .blog-two__card__meta {
   display: flex;
@@ -2214,6 +2227,7 @@ h6 {
   padding-bottom: 0;
   text-transform: capitalize;
   color: var(--solveritas-text-dark, #202220);
+  margin-top: auto; /* Pushes title to bottom */
 }
 .blog-two__card__title a {
   color: inherit;
@@ -2235,6 +2249,26 @@ h6 {
   right: 0;
   opacity: 0;
   transition: all 400ms linear;
+}
+
+/* Responsive adjustments for blog two cards */
+@media (max-width: 1199px) {
+  .blog-two__card__image {
+    height: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .blog-two__card__image {
+    height: 180px;
+  }
+  .blog-two__card__content {
+    padding: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .blog-two__card__image {
+    height: 220px;
+  }
 }
 .blog-two__list {
   padding: 30px;
@@ -2644,6 +2678,8 @@ h6 {
   width: 100%;
   height: 100%;
 }
+
+
 
 /*--------------------------------------------------------------
 # Form
@@ -4162,7 +4198,7 @@ h6 {
   text-shadow: 0 0 0.5px currentColor;
   text-transform: capitalize;
 }
-.main-menu .main-menu__list > li.current > a,
+/* .main-menu .main-menu__list > li.current > a, */
 .main-menu .main-menu__list > li:hover > a {
   color: var(--solveritas-base, #60AC45);
   text-shadow: 0 0 1px currentColor;
@@ -6812,6 +6848,24 @@ body.megamenu-popup-active .mobile-nav__content {
 /*--------------------------------------------------------------
 # Blog details
 --------------------------------------------------------------*/
+
+/* Blog Card Image Container */
+.blog-card__image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 350px; /* Fixed height for all thumbnails */
+    border-radius: 8px 8px 0 0; /* Optional: rounded corners only at top */
+}
+
+/* Blog Thumbnail Image */
+.blog-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures images cover the area while maintaining aspect ratio */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
 .blog-details .blog-card-two {
   padding-bottom: 0;
   border-bottom: none;
@@ -10671,6 +10725,69 @@ body.megamenu-popup-active .mobile-nav__content {
   background-color: #9cc1aa;
 }
 
+/*--------------------------------------------------------------
+# Client Carousel
+--------------------------------------------------------------*/
+.client-carousel {
+  padding: 80px 0;
+}
+@media (min-width: 992px) {
+  .client-carousel {
+    padding: 102px 0;
+  }
+}
+.client-carousel__one__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease;
+  position: relative;
+  background-color: transparent;
+  border-radius: 50px;
+  max-width: 110px;
+  height: 80px;
+}
+.client-carousel__one__item img {
+  transition: all 500ms ease;
+  max-width: 100%;
+  width: auto !important;
+  cursor: pointer;
+}
+.client-carousel__one__item:hover .client-carousel__one__hover-image {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+.client-carousel__one__item:hover .client-carousel__one__image {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.client-carousel__one__hover-image {
+  transition: all 500ms ease;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  visibility: hidden;
+  opacity: 0;
+}
+.client-carousel__one__image {
+  transition: 500ms;
+  max-width: 122px;
+  width: auto;
+  transition: all 500ms ease;
+}
+
 
 
 /*--------------------------------------------------------------
@@ -12371,7 +12488,7 @@ body.megamenu-popup-active .mobile-nav__content {
   left: -60px;
   bottom: -60px;
   right: -60px;
-  border: 1px solid var(--solveritas-border-color, #DEDEDE);
+  /* border: 1px solid var(--solveritas-border-color, #DEDEDE); */
 }
 @media (max-width: 1199px) {
   .about-one .container::after {
@@ -12393,10 +12510,10 @@ body.megamenu-popup-active .mobile-nav__content {
   width: 53.6%;
   bottom: -60px;
   left: -60px;
-  background-image: url(../images/shapes/about-line-1-1.png);
+  /* background-image: url(../images/shapes/about-line-1-1.png); */
   background-repeat: no-repeat;
   background-position: center center;
-  border-right: 1px solid var(--solveritas-border-color, #DEDEDE);
+  /* border-right: 1px solid var(--solveritas-border-color, #DEDEDE); */
 }
 @media (max-width: 1199px) {
   .about-one .container::before {
@@ -12447,7 +12564,7 @@ body.megamenu-popup-active .mobile-nav__content {
   padding-bottom: 0;
   color: var(--solveritas-text-dark, #202220);
   text-transform: capitalize;
-  max-width: 200px;
+  max-width: 300px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -12606,7 +12723,7 @@ body.megamenu-popup-active .mobile-nav__content {
   width: 223px;
   height: 355px;
   background: transparent;
-  border: 3px solid var(--solveritas-base, #60AC45);
+  /* border: 3px solid var(--solveritas-base, #60AC45); */
   right: 30px;
   top: 50px;
   z-index: -1;
@@ -15074,3 +15191,160 @@ body.boxed-wrapper .topbar-one {
 .contact-item:hover .qr-popup {
     display: block;
 }
+
+.product-details__gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .product-details__main-img {
+        border: 1px solid #eee;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .product-details__main-img img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .product-details__thumbnails {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .thumbnail-item {
+        width: 80px;
+        height: 80px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .thumbnail-item:hover {
+        border-color: var(--solveritas-base);
+    }
+    
+    .thumbnail-item.active {
+        border-color: var(--solveritas-base);
+        box-shadow: 0 0 0 2px rgba(var(--solveritas-base-rgb), 0.3);
+    }
+    
+    .thumbnail-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* feedback */
+    .feedback-section {
+        padding: 80px 0;
+        background-color: #f9f9f9;
+    }
+    
+    .feedback-card {
+        background: white;
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .feedback-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: linear-gradient(to bottom, var(--solveritas-base), var(--solveritas-secondary));
+    }
+    
+    .feedback-title {
+        font-size: 32px;
+        margin-bottom: 10px;
+        color: var(--solveritas-black);
+        position: relative;
+        padding-left: 20px;
+    }
+    
+    .feedback-subtitle {
+        color: #666;
+        margin-bottom: 30px;
+        padding-left: 20px;
+    }
+    
+    .feedback-form {
+        margin-top: 20px;
+    }
+    
+    .form-group {
+        position: relative;
+        margin-bottom: 25px;
+    }
+    
+    .form-control {
+        width: 100%;
+        padding: 15px 15px 15px 45px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s;
+    }
+    
+    .form-control:focus {
+        border-color: var(--solveritas-base);
+        box-shadow: 0 0 0 3px rgba(var(--solveritas-base-rgb), 0.1);
+        outline: none;
+    }
+    
+    textarea.form-control {
+        min-height: 120px;
+        resize: vertical;
+        padding-top: 15px;
+    }
+    
+    .form-icon {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        color: var(--solveritas-base);
+        font-size: 18px;
+    }
+    
+    .feedback-submit {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 8px;
+        transition: all 0.3s;
+    }
+    
+    .feedback-submit i {
+        margin-left: 10px;
+        transition: all 0.3s;
+    }
+    
+    .feedback-submit:hover i {
+        transform: translateX(5px);
+    }
+    
+    @media (max-width: 767px) {
+        .feedback-card {
+            padding: 30px 20px;
+        }
+        
+        .feedback-title {
+            font-size: 26px;
+        }
+    }

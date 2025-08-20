@@ -29,36 +29,16 @@
                                     <div class="blog-card-two__image__item">
                                         <img src="{{ blog.featured_image.url }}" alt="{{ blog.title }}">
                                     </div>
-                                    <div class="blog-card-two__date"><span class="blog-card-two__date__day">20</span> <span class="blog-card-two__date__month">June</span></div>
+                                    {% comment %} <div class="blog-card-two__date"><span class="blog-card-two__date__day">20</span> <span class="blog-card-two__date__month">June</span></div> {% endcomment %}
                                 </div>
                                 <div class="blog-card-two__content">
                                     <ul class="blog-card-two__meta list-unstyled">
                                         <li class="blog-card-two__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by {{ blog.author }}</a></li>
                                         {% comment %} <li class="blog-card-two__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li> {% endcomment %}
                                     </ul>
-                                    <h3 class="blog-card-two__title wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>There are many variations of passages of available but majority</h3>
-                                    <p class="blog-card-two__text wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>Neque porro est qui dolorem ipsum quia quaed inventor veritatis et quasi architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    <p class="blog-card-two__text wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Aelltes port lacus quis enim var sed efficitur</p>
-                                    <div class="blog-details__feature__thumb">
-                                        <div class="row gutter-y-30">
-                                            <div class="col-sm-6">
-                                                <div class="blog-details__feature__thumb__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                                    <img src="{% static "images/blog/blog-s-project-1-1.jpg" %}" alt="blog thumb">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="blog-details__feature__thumb__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='700ms'>
-                                                    <img src="{% static "images/blog/blog-s-project-1-2.jpg" %}" alt="blog thumb">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="blog-card-two__text wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>Neque porro est qui dolorem ipsum quia quaed inventor veritatis et quasi architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                                    <ul class="blog-details__list wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                        <li class="blog-details__list__item">Another area of AI that holds great promise is robotics, which involves developing </li>
-                                        <li class="blog-details__list__item">AI also has the potential to improve healthcare, by enabling more accurate diagnosis and </li>
-                                        <li class="blog-details__list__item">However, there are also challenges associated with the development and deployment </li>
-                                    </ul>
+                                    
+                                    <p class="blog-card-two__text wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>{{blog.content|safe}}</p>
+                                   
                                 </div>
                             </div>
 
@@ -67,7 +47,7 @@
                                     <h4 class="blog-details__cetagoris__title">categories:</h4>
                                     <div class="sidebar__cetagoris">
                                         {% for category in blog_categories %}
-                                        <a href="blog-list-right.html">{{ category.name }}</a>
+                                        <a href="{% url "blogs_by_category" category.slug %}">{{ category.name }}</a>
                                         {% comment %} <a href="blog-list-right.html">brand</a> {% endcomment %}
                                         {% endfor %}
                                     </div>

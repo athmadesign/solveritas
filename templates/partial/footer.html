@@ -58,23 +58,17 @@
                             <div class="footer-widget wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
                                 <h4 class="footer-widget__title">about <span>solveritas</span></h4>
                                 <p class="footer-widget__text">There are two main types: solar photovoltaic (PV) systems for electricity generation and</p>
-                                <div class="footer-widget__social">
-                                    <a href="https://facebook.com/"><i class="icon-facebook" aria-hidden="true"></i></a>
-                                    <a href="https://twitter.com/"><i class="icon-twitter" aria-hidden="true"></i></a>
-                                    <a href="https://instagram.com/"><i class="icon-social-media" aria-hidden="true"></i></a>
-                                    <a href="https://youtube.com/"><i class="icon-youtube" aria-hidden="true"></i></a>
-                                </div>
+                                
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6">
                             <div class="footer-widget wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                <h4 class="footer-widget__title">our <span>services</span></h4>
+                                <h4 class="footer-widget__title">our <span>Products</span></h4>
                                 <ul class="list-unstyled footer-widget__links">
-                                    <li class="footer-widget__links__item"><a href="service-d-wind-generator.html">Wind Turbines</a></li>
-                                    <li class="footer-widget__links__item"><a href="service-d-solar-service.html">Solar Panels</a></li>
-                                    <li class="footer-widget__links__item"><a href="service-d-hydropower-plants.html">Hydropower Plants</a></li>
-                                    <li class="footer-widget__links__item"><a href="service-d-energy-panels.html">Fossil Resources</a></li>
-                                    <li class="footer-widget__links__item"><a href="service-d-thermo-stone.html">Battery Materials</a></li>
+                                    {% for category in menu_categories %}
+                                    <li class="footer-widget__links__item"><a href="{% url 'products_by_category' category.slug %}">{{ category.name }}</a></li>
+                                    
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>
@@ -82,24 +76,25 @@
                             <div class="footer-widget wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='700ms'>
                                 <h4 class="footer-widget__title">useful <span>links</span></h4>
                                 <ul class="list-unstyled footer-widget__links">
-                                    <li class="footer-widget__links__item"><a href="about.html">About Us</a></li>
-                                    <li class="footer-widget__links__item"><a href="team.html">Leadership Team</a></li>
-                                    <li class="footer-widget__links__item"><a href="blog-grid.html">News & blog</a></li>
-                                    <li class="footer-widget__links__item"><a href="project.html">Our Projects</a></li>
-                                    <li class="footer-widget__links__item"><a href="contact.html">Contacts</a></li>
+                                    <li class="footer-widget__links__item"><a href="{% url "about" %}">About Us</a></li>
+                                    <li class="footer-widget__links__item"><a href="{% url "products" %}">Products</a></li>
+                                    <li class="footer-widget__links__item"><a href="{% url "blog" %}">News & blog</a></li>
+                                    {% comment %} <li class="footer-widget__links__item"><a href="{% url "feedback" %}">Feedback</a></li> {% endcomment %}
+                                    <li class="footer-widget__links__item"><a href="{% url "contact" %}">Contacts</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6">
                             <div class="footer-widget wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='900ms'>
-                                <h4 class="footer-widget__title">get <span>notification</span></h4>
-                                <p class="footer-widget__text">get notification from our latest news! enter your email here</p>
-                                <form action="#" data-url="MAILCHIMP_FORM_URL" class="footer-widget__newsletter mc-form">
-                                    <input type="email" name="EMAIL" placeholder="Email">
-                                    <span class="icon-mail icon"></span>
-                                    <button type="submit" class="solveritas-btn solveritas-btn--base">subscribe now</button>
-                                </form>
-                                <div class="mc-form__response"></div>
+                                <h4 class="footer-widget__title">follow <span>us</span></h4>
+                                <p class="footer-widget__text">Follow our social media pages for updates, events, and exclusive stories</p>
+                                <div class="footer-widget__social">
+                                    <a href="http://facebook.com/profile.php?id=61579244730084" target='_blank'><i class="icon-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://x.com/Solveritassolar" target='_blank'><i class="icon-twitter" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/solveritasglobalsolar?igsh=M2t5cDBjc3RqMmc5" target='_blank'><i class="icon-social-media" aria-hidden="true"></i></a>
+                                    <a href="http://youtube.com/@solveritasglobal" target='_blank'><i class="icon-youtube" aria-hidden="true"></i></a>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>

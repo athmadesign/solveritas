@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from . models import Slider
+from blog.models import BlogPost
 
 # Create your views here.
 
 def home(request):
     sliders = Slider.objects.filter(is_active=True).order_by('order')
-    context = { 'sliders' : sliders}
+    latest_blogs = BlogPost.objects.order_by('created_at')[:3]
+    context = { 'sliders' : sliders, 'latest_blogs':latest_blogs}
     return render(request, 'core/index.html', context)
 
 def about(request):
@@ -22,3 +24,6 @@ def case(request):
 
 def feedback(request):
     return render(request, 'core/feedback.html')
+
+def custom_404_view(request, exception):
+    return render(request, 'core/404.html', status=404)

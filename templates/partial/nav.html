@@ -18,20 +18,19 @@
                         </li>
                         <li class="topbar-one__info__item">
                             <div class="topbar-one__info__icon">
-                                <i class="icon-clock"></i>
+                                <i class="icon-telephone"></i>
                             </div>
                             <div class="topbar-one__info__item__content">
-                                {% comment %} <span class="topbar-one__info__item__subtitle">opening time</span> {% endcomment %}
-                                <p class="topbar-one__info__item__location">Hours: Mon-Fri: 8am – 7pm</p>
+                                <p class="topbar-one__info__item__location"><a href="tel:+919876453210">+91 987 645 3210</a></p>
                             </div>
                         </li>
                     </ul>
                     <div class="topbar-one__right">
                         <div class="topbar-one__social">
-                            <a href="https://facebook.com/"><i class="icon-facebook" aria-hidden="true"></i></a>
-                            <a href="https://twitter.com/"><i class="icon-twitter" aria-hidden="true"></i></a>
-                            <a href="https://instagram.com/"><i class="icon-social-media" aria-hidden="true"></i></a>
-                            <a href="https://youtube.com/"><i class="icon-youtube" aria-hidden="true"></i></a>
+                            <a href="http://facebook.com/profile.php?id=61579244730084" target='_blank'><i class="icon-facebook" aria-hidden="true"></i></a>
+                            <a href="https://x.com/Solveritassolar" target='_blank'><i class="icon-twitter" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/solveritasglobalsolar?igsh=M2t5cDBjc3RqMmc5" target='_blank'><i class="icon-social-media" aria-hidden="true"></i></a>
+                            <a href="http://youtube.com/@solveritasglobal" target='_blank'><i class="icon-youtube" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -56,11 +55,11 @@
 
 
 
-                            <li>
+                            <li class="">
                                 <a href="{% url "about" %}">about us</a>
                             </li>
 
-                            <li class="dropdown">
+                            <li class="dropdown ">
     <a href="{% url 'products' %}">Products</a>
     <ul class="sub-menu">
         {% for category in menu_categories %}
@@ -87,7 +86,7 @@
                                 
                                 <ul class="sub-menu">
                                     {% for category in blog_categories %}
-                                    <li><a href="blog-carousel.html">{{ category.name}} </a></li>
+                                    <li><a href="{% url "blogs_by_category" category.slug %}">{{ category.name}} </a></li>
                                     {% comment %} <li><a href="blog-carousel.html">Industry News</a></li> {% endcomment %}
                                     {% endfor %}
                                 </ul>
@@ -121,7 +120,7 @@
                                 <i class="icon-telephone"></i>
                             </div>
                             <div class="main-header__right__content">
-                                <span class="main-header__right__text">call agent</span>
+                                <span class="main-header__right__text">Contact Us</span>
                                 <h6 class="main-header__right__number">+92 3800 8060</h6>
                             </div>
                         </a>

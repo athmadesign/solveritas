@@ -42,7 +42,7 @@
                                 <h3 class="product__sidebar--title">Categories</h3>
                                 <ul class="list-unstyled">
                                     {% for category in menu_categories %}
-                                    <li><a href="{% url 'products_by_category' category.slug %}"><i class="icon-arrow-point-to-right"></i>{{ category.name }}</a></li>
+                                    <li><a href="products.html"><i class="icon-arrow-point-to-right"></i>{{ category.name }}</a></li>
                                     {% endfor %}
                                 </ul>
                             </div><!-- /.category-widget -->
@@ -53,13 +53,13 @@
                             <div class="product__showing-text-box">
                                 <p class="product__showing-text">Showing 1–9 of 12 Results</p>
                             </div>
-                            {% comment %} <div class="product__showing-sort">
+                            <div class="product__showing-sort">
                                 <select class="selectpicker" aria-label="default shorting">
                                     <option selected>default shorting</option>
                                     <option value="1">Sort by view</option>
                                     <option value="2">Sort by price</option>
                                 </select>
-                            </div> {% endcomment %}
+                            </div>
                         </div>
 
                         <div class="row gutter-y-30">
@@ -71,7 +71,7 @@
                                             <img src="{{ product.image.url }}" alt="{{product.name}}">
                                         </div>
                                         <div class="product__item__btn">
-                                            <a href="#"><i class="far fa-heart"></i></a>
+                                            <a href="cart.html"><i class="far fa-heart"></i></a>
                                             <a href="{% url "product-detail" product.slug %}"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </div>
@@ -86,7 +86,10 @@
                                         <h4 class="product__item__title"><a href="{% url "product-detail" product.slug %}">{{ product.name }}</a></h4>
                                         <div class="product__item__price">${{ product.price }}</div>
 
-                                        <a href="{% url "product-detail" product.slug %}" class="solveritas-btn solveritas-btn--base product__item__link">View Product
+                                        <a href="cart.html" class="solveritas-btn solveritas-btn--base product__item__link">Add to Cart
+                                            <span class="product__item__link__icon">
+                                                <i class="icon-cart"></i>
+                                            </span>
                                         </a>
                                     </div>
                                 </div>

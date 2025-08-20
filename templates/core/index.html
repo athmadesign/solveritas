@@ -64,14 +64,8 @@
                     <div class="col-lg-6">
                         <div class="about-one__left">
                             <div class="about-one__thumb wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                                <img src="{% static 'images/about/about-1-1.png' %}" alt="solveritas image">
-                                <div class="about-one__funfact count-box">
-                                    <h3 class="about-one__count">
-                                        <span class="count-text" data-stop="25" data-speed="1500"></span>
-                                        <sub>+</sub>
-                                    </h3>
-                                    <p class="about-one__funfact__text">years of experience</p>
-                                </div>
+                                <img src="{% static 'images/about/about-1-1.webp' %}" alt="solveritas image">
+                                
                             </div>
                         </div>
                     </div>
@@ -82,24 +76,21 @@
                                     <i class="sec-title__icon icon-solar-panel"></i>
                                     <h6 class="sec-title__tagline">about us</h6>
                                 </div>
-                                <h3 class="sec-title__title">We are the Best In solar energy Solutions</h3>
+                                <h3 class="sec-title__title">Leading the Future of Renewable Energy</h3>
                             </div>
-                            <p class="about-one__top__text about-one__top__text--text">In recent years, new capacity across the solar value chain has become necessary to support the PV market’s growth. However</p>
-                            <p class="about-one__top__text">the capital required to establish and scale-up wafer, solar cell and solar module manufacturing facilities is considerable, Turpis egestas pretiu enean pharetra magna ac placerat amet. Sit amet luctus venenatis lectus</p>
+                            <p class="about-one__top__text about-one__top__text--text">Empowering communities with sustainable solar and wind solutions for a cleaner tomorrow.</p>
+                            <p class="about-one__top__text">We specialize in designing and delivering reliable solar and wind energy systems that drive efficiency and reduce environmental impact. With innovative technology and proven expertise, we provide cost-effective renewable solutions that meet the energy demands of today and tomorrow.</p>
                             <ul class="about-one__list list-unstyled">
-                                <li class="about-one__list__item"><i class="icon-checked"></i> Project Planing</li>
-                                <li class="about-one__list__item"><i class="icon-checked"></i> Best Energy Solutions</li>
-                                <li class="about-one__list__item"><i class="icon-checked"></i> Wind Generators</li>
-                                <li class="about-one__list__item"><i class="icon-checked"></i> Simple & Easy to Use</li>
+                                {% comment %} <li class="about-one__list__item"><i class="icon-checked"></i> Custom Energy Planning</li> {% endcomment %}
+                                <li class="about-one__list__item"><i class="icon-checked"></i> Advanced Solar Technology</li>
+                                <li class="about-one__list__item"><i class="icon-checked"></i> User-Friendly Solutions</li>
                             </ul>
-                            <a href="about.html" class="solveritas-btn">more about us <i class="icon-arrow-point-to-right"></i></a>
+                            <a href="{% url "about" %}" class="solveritas-btn">more about us <i class="icon-arrow-point-to-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="about-one__shape">
-                <img src="{% static 'images/shapes/about-1-1.png' %}" alt>
-            </div>
+            
         </section>
         <!-- About Section End -->
 
@@ -289,7 +280,7 @@
 
         <!-- work process Section Start -->
         <section class="work-process-one">
-            <div class="work-process-one__bg" style="background-image: url({% static 'images/shapes/work-process-shape-1-1.png' %});"></div>
+            {% comment %} <div class="work-process-one__bg" style="background-image: url({% static 'images/shapes/work-process-shape-1-1.png' %});"></div> {% endcomment %}
             <div class="container">
                 <div class="sec-title text-center wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
                     <div class="d-flex align-items-center justify-content-center">
@@ -307,8 +298,8 @@
                                 </div>
                                 <div class="work-process-one__item__number"></div>
                             </div>
-                            <h4 class="work-process-one__title">getting started</h4>
-                            <p class="work-process-one__text">the capital required to establish and scale-up wafer, solar cell and solar module manufacturing facilitie</p>
+                            <h4 class="work-process-one__title">Consultation & Planning</h4>
+                            <p class="work-process-one__text">We begin with a detailed assessment of your energy needs and create a customized solar solution tailored to your home or business.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
@@ -319,8 +310,8 @@
                                 </div>
                                 <div class="work-process-one__item__number"></div>
                             </div>
-                            <h4 class="work-process-one__title">solar installation</h4>
-                            <p class="work-process-one__text">the capital required to establish and scale-up wafer, solar cell and solar module manufacturing facilitie</p>
+                            <h4 class="work-process-one__title">Professional Installation</h4>
+                            <p class="work-process-one__text">Our expert team handles the setup with precision, ensuring high-quality installation and compliance with safety standards.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
@@ -331,8 +322,8 @@
                                 </div>
                                 <div class="work-process-one__item__number"></div>
                             </div>
-                            <h4 class="work-process-one__title">ready to use</h4>
-                            <p class="work-process-one__text">the capital required to establish and scale-up wafer, solar cell and solar module manufacturing facilitie</p>
+                            <h4 class="work-process-one__title">Power On & Save</h4>
+                            <p class="work-process-one__text">Once installed, your system is activated — delivering clean, renewable energy while reducing your electricity bills.</p>
                         </div>
                     </div>
                 </div>
@@ -348,19 +339,9 @@
                     <div class="col-lg-6">
                         <div class="faqs-two__thumb faqs-two__thumb--two wow fadeInLeft" data-wow-duration='1500ms' data-wow-delay='300ms'>
                             <div class="faqs-two__thumb__item">
-                                <img src="{% static 'images/resources/faqs-2-1.jpg' %}" alt="solveritas image">
+                                <img src="{% static 'images/resources/faq-1-1.png' %}" alt="solveritas image">
                             </div>
-                            <div class="faqs-two__thumb__item">
-                                <img src="{% static 'images/resources/faqs-2-2.jpg' %}" alt="solveritas image">
-                                <div class="faqs-two__thumb__item__video">
-                                    <div class="faqs-two__thumb__item__icon">
-                                        <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="faqs-two__video video-popup">
-                                            <i class="icon-play"></i>
-                                        </a>
-                                    </div>
-                                    <p class="faqs-two__thumb__item__text">Watch Our Intro</p>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -371,7 +352,7 @@
                             </div>
                             <h3 class="sec-title__title">Some Faq Question?</h3>
                         </div>
-                        <p class="faqs-two__top__text wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>the capital required to establish and scale-up wafer, solar cell and solar module manufacturing facilities is considerable, Turpis egestas pretiu enean pharetra magna ac placerat amet. Sit amet luctus venenatis lectus</p>
+                        <p class="faqs-two__top__text wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>Building and expanding wafer, solar cell, and module manufacturing facilities demands high investment. Success relies on strong infrastructure, advanced processes, and long-term financial commitment.</p>
                         <div class="faq-page__accordion-two solveritas-accrodion wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms' data-grp-name="solveritas-accrodion">
                             <div class="accrodion">
                                 <div class="accrodion-title">
@@ -379,37 +360,37 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
-                                        <p class="inner__text">There are two main types: solar photovoltaic (PV) systems for electricity generation and solar thermal systems for heating applications.</p>
+                                        <p class="inner__text">Solar panels capture sunlight and convert it into electricity using photovoltaic (PV) cells.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="accrodion active">
                                 <div class="accrodion-title">
-                                    <h4 class="accrodion-title__text"><span class="accrodion-title__icon"></span>What are the main types of solar energy systems?</h4>
+                                    <h4 class="accrodion-title__text"><span class="accrodion-title__icon"></span>What are the main types of solar systems?</h4>
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
-                                        <p class="inner__text">There are two main types: solar photovoltaic (PV) systems for electricity generation and solar thermal systems for heating applications.</p>
+                                        <p class="inner__text">The two main types are solar PV systems (electricity) and solar thermal systems (heating).</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="accrodion">
                                 <div class="accrodion-title">
-                                    <h4 class="accrodion-title__text"> <span class="accrodion-title__icon"></span>What are the advantages of solar energy?</h4>
+                                    <h4 class="accrodion-title__text"> <span class="accrodion-title__icon"></span>What are the benefits of solar energy?</h4>
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
-                                        <p class="inner__text">There are two main types: solar photovoltaic (PV) systems for electricity generation and solar thermal systems for heating applications.</p>
+                                        <p class="inner__text">Solar energy is renewable, cost-saving, low-maintenance, and eco-friendly.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="accrodion">
                                 <div class="accrodion-title">
-                                    <h4 class="accrodion-title__text"><span class="accrodion-title__icon"></span>How much space do I need for solar panels?</h4>
+                                    <h4 class="accrodion-title__text"><span class="accrodion-title__icon"></span>How much space do solar panels need?</h4>
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
-                                        <p class="inner__text">There are two main types: solar photovoltaic (PV) systems for electricity generation and solar thermal systems for heating applications.</p>
+                                        <p class="inner__text">A typical 1kW solar system needs 100 sq. ft. of shadow-free space.</p>
                                     </div>
                                 </div>
                             </div>
@@ -417,9 +398,7 @@
                     </div>
                 </div>
             </div>
-            <div class="faqs-two__element">
-                <img src="{% static 'images/shapes/faqs-1-1.png' %}" alt>
-            </div>
+            
         </section>
         <!-- FAQS Section End -->
 
@@ -606,49 +585,66 @@
         </section>
         <!-- Project Section End -->
 
-        <!-- Gallery Section Start -->
-        <div class="insagram-one">
+        <div class="client-carousel ">
             <div class="container">
-                <div class="insagram-one__inner">
-                    <ul class="insagram-one__list list-unstyled">
-                        <li class="insagram-one__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                            <img src="{% static 'images/instagram/1.jpg' %}" alt="solveritas">
-                            <div class="insagram-one__item__icon">
-                                <a href="https://www.instagram.com/"><span class="icon-instagram"></span></a>
-                            </div>
-                        </li>
-                        <li class="insagram-one__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                            <img src="{% static 'images/instagram/2.jpg' %}" alt="solveritas">
-                            <div class="insagram-one__item__icon">
-                                <a href="https://www.instagram.com/"><span class="icon-instagram"></span></a>
-                            </div>
-                        </li>
-                        <li class="insagram-one__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                            <img src="{% static 'images/instagram/3.jpg' %}" alt="solveritas">
-                            <div class="insagram-one__item__icon">
-                                <a href="https://www.instagram.com/"><span class="icon-instagram"></span></a>
-                            </div>
-                        </li>
-                        <li class="insagram-one__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='700ms'>
-                            <img src="{% static 'images/instagram/4.jpg' %}" alt="solveritas">
-                            <div class="insagram-one__item__icon">
-                                <a href="https://www.instagram.com/"><span class="icon-instagram"></span></a>
-                            </div>
-                        </li>
-                        <li class="insagram-one__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='900ms'>
-                            <img src="{% static 'images/instagram/5.jpg' %}" alt="solveritas">
-                            <div class="insagram-one__item__icon">
-                                <a href="https://www.instagram.com/"><span class="icon-instagram"></span></a>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="client-carousel__one solveritas-owl__carousel owl-theme owl-carousel" data-owl-options='{
+            "items": 5,
+            "margin": 65,
+            "smartSpeed": 700,
+            "loop":true,
+            "autoplay": 6000,
+            "nav":false,
+            "dots":false,
+            "navText": ["<span class=\"icon-arrow-point-to-left\"></span>","<span class=\"icon-arrow-point-to-right\"></span>"],
+            "responsive":{
+                "0":{
+                    "items":1,
+                    "margin": 0
+                },
+                "360":{
+                    "items":2,
+                    "margin": 30
+                },
+                "575":{
+                    "items":3,
+                    "margin": 30
+                },
+                "768":{
+                    "items":3,
+                    "margin": 40
+                },
+                "992":{
+                    "items": 4,
+                    "margin": 40
+                },
+                "1200":{
+                    "items": 5,
+                    "margin": 140
+                }
+            }
+            }'>
+                    <div class="client-carousel__one__item">
+                        <img class="client-carousel__one__image" src="{% static "images/brand/brand-1-1.png" %}" alt="solveritas">
+                        <img class="client-carousel__one__hover-image" src="{% static "images/brand/brand-hover-1-1.png" %}" alt="solveritas">
+                    </div>
+                    <div class="client-carousel__one__item">
+                        <img class="client-carousel__one__image" src="{% static "images/brand/brand-1-2.png" %}" alt="solveritas">
+                        <img class="client-carousel__one__hover-image" src="{% static "images/brand/brand-hover-1-2.png" %}" alt="solveritas">
+                    </div>
+                    <div class="client-carousel__one__item">
+                        <img class="client-carousel__one__image" src="{% static "images/brand/brand-1-3.png" %}" alt="solveritas">
+                        <img class="client-carousel__one__hover-image" src="{% static "images/brand/brand-hover-1-3.png" %}" alt="solveritas">
+                    </div>
+                    <div class="client-carousel__one__item">
+                        <img class="client-carousel__one__image" src="{% static "images/brand/brand-1-4.png" %}" alt="solveritas">
+                        <img class="client-carousel__one__hover-image" src="{% static "images/brand/brand-hover-1-4.png" %}" alt="solveritas">
+                    </div>
+                    
+
                 </div>
             </div>
         </div>
-        <!-- Gallery Section End -->
-
         
-
         <!-- Testimonials Section Start -->
         <section class="testimonial-one">
             <div class="testimonial-one__bg jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% -100%" style="background-image: url({% static 'images/backgrounds/testimonial-bg-1-1.png' %});"></div>
@@ -941,162 +937,50 @@
         </section>
         <!-- Testimonials Section End -->
 
-        <!-- Team Section Start -->
-        <section class="team-one">
-            <div class="container">
-                <div class="team-one__top">
-                    <div class="row align-items-end">
-                        <div class="col-lg-8">
-                            <div class="sec-title wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <i class="sec-title__icon icon-solar-panel"></i>
-                                    <h6 class="sec-title__tagline">expert team</h6>
-                                </div>
-                                <h3 class="sec-title__title">our expert team</h3>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="team-one__top__btn">
-                                <a href="team.html" class="solveritas-btn">view all team <i class="icon-arrow-point-to-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gutter-y-30">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="team-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                            <div class="team-card__image">
-                                <img src="{% static 'images/team/team-1-1.jpg' %}" alt="Savannah Nguyen">
-                            </div>
-                            <div class="team-card__content">
-                                <h3 class="team-card__title">
-                                    <a href="team-details.html">Savannah Nguyen</a>
-                                </h3>
-                                <h6 class="team-card__designation">Marketing Expert</h6>
-                                <div class="team-card__social">
-                                    <a href="https://facebook.com/"><i class="icon-facebook" aria-hidden="true"></i></a>
-                                    <a href="https://instagram.com/"><i class="icon-instagram" aria-hidden="true"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="team-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                            <div class="team-card__image">
-                                <img src="{% static 'images/team/team-1-2.jpg' %}" alt="Leslie Alexander">
-                            </div>
-                            <div class="team-card__content">
-                                <h3 class="team-card__title">
-                                    <a href="team-details.html">Leslie Alexander</a>
-                                </h3>
-                                <h6 class="team-card__designation">Web Developer</h6>
-                                <div class="team-card__social">
-                                    <a href="https://facebook.com/"><i class="icon-facebook" aria-hidden="true"></i></a>
-                                    <a href="https://instagram.com/"><i class="icon-instagram" aria-hidden="true"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="team-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                            <div class="team-card__image">
-                                <img src="{% static 'images/team/team-1-3.jpg' %}" alt="Darlene Robertson">
-                            </div>
-                            <div class="team-card__content">
-                                <h3 class="team-card__title">
-                                    <a href="team-details.html">Darlene Robertson</a>
-                                </h3>
-                                <h6 class="team-card__designation">WordPress Expert</h6>
-                                <div class="team-card__social">
-                                    <a href="https://facebook.com/"><i class="icon-facebook" aria-hidden="true"></i></a>
-                                    <a href="https://instagram.com/"><i class="icon-instagram" aria-hidden="true"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Team Section End -->
+        
 
         <!-- Blog Section Start -->
-        <section class="blog-two">
-            <div class="container">
-                <div class="sec-title text-center wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                    <div class="d-flex align-items-center justify-content-center">
-                        <i class="sec-title__icon icon-solar-panel"></i>
-                        <h6 class="sec-title__tagline">letest blog</h6>
-                    </div>
-                    <h3 class="sec-title__title">Our Latest Blog</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="blog-two__left">
-                            <div class="blog-two__card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                                <div class="blog-two__card__image">
-                                    <a href="blog-details-right.html" class="blog-two__card__image__item">
-                                        <img src="{% static 'images/blog/blog-2-1.jpg' %}" alt="solveritas image">
-                                    </a>
-                                    <div class="blog-two__card__date"><span class="blog-two__card__date__day">20</span> <span class="blog-two__card__date__month">June</span></div>
-                                </div>
-                                <div class="blog-two__card__content">
-                                    <ul class="blog-two__card__meta list-unstyled">
-                                        <li class="blog-two__card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by Admin</a></li>
-                                        <li class="blog-two__card__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
-                                    </ul>
-                                    <h3 class="blog-two__card__title"><a href="blog-details-right.html">Collaboratively pontificate bleeding edge resources with inexpensive methodologies</a></h3>
-                                </div>
-                            </div>
+<section class="blog-two">
+    <div class="container">
+        <div class="sec-title text-center wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+            <div class="d-flex align-items-center justify-content-center">
+                <i class="sec-title__icon icon-solar-panel"></i>
+                <h6 class="sec-title__tagline">latest blog</h6>
+            </div>
+            <h3 class="sec-title__title">Our Latest Blog</h3>
+        </div>
+        <div class="row">
+            {% for blog in latest_blogs %}
+            <div class="col-lg-4">
+                <div class="blog-two__left">
+                    <div class="blog-two__card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='{{ forloop.counter|add:"2" }}00ms'>
+                        <div class="blog-two__card__image">
+                            <a href="{% url 'blog_detail' blog.slug %}" class="blog-two__card__image__item">
+                                <img src="{{ blog.featured_image.url }}" alt="{{ blog.title }}" class="blog-two__thumbnail">
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="blog-two__right">
-                            <div class="blog-two__list">
-                                <div class="blog-two__list__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                    <a href="blog-details-right.html" class="blog-two__list__image">
-                                        <img src="{% static 'images/blog/blog-s-2-1.jpg' %}" alt="solveritas image">
-                                    </a>
-                                    <div class="blog-two__list__content">
-                                        <ul class="blog-two__list__meta list-unstyled">
-                                            <li class="blog-two__list__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by Admin</a></li>
-                                            <li class="blog-two__list__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
-                                        </ul>
-                                        <h4 class="blog-two__list__title"><a href="blog-details-right.html">Collaboratively pontificate bleedi edge resources</a></h4>
-                                        <div class="blog-two__list__date"><span class="blog-two__card__date__day">20</span> <span class="blog-two__card__date__month">June</span></div>
-                                    </div>
-                                </div>
-                                <div class="blog-two__list__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='700ms'>
-                                    <a href="blog-details-right.html" class="blog-two__list__image">
-                                        <img src="{% static 'images/blog/blog-s-2-2.jpg' %}" alt="solveritas image">
-                                    </a>
-                                    <div class="blog-two__list__content">
-                                        <ul class="blog-two__list__meta list-unstyled">
-                                            <li class="blog-two__list__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by Admin</a></li>
-                                            <li class="blog-two__list__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
-                                        </ul>
-                                        <h4 class="blog-two__list__title"><a href="blog-details-right.html">Collaboratively pontificate bleedi edge resources</a></h4>
-                                        <div class="blog-two__list__date"><span class="blog-two__card__date__day">20</span> <span class="blog-two__card__date__month">June</span></div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="blog-two__card__content">
+                            <ul class="blog-two__card__meta list-unstyled">
+                                <li class="blog-two__card__meta__item">
+                                    <a href="#"><i class="icon-user"></i>by {{ blog.author|default:"Admin" }}</a>
+                                </li>
+                                <li class="blog-two__card__meta__item">
+                                    <a href="#"><i class="icon-comments-icon"></i>{{ blog.comments.count }} Comments</a>
+                                </li>
+                            </ul>
+                            <h3 class="blog-two__card__title">
+                                <a href="{% url 'blog_detail' blog.slug %}">{{ blog.title }}</a>
+                            </h3>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="blog-two__element-one">
-                <img src="{% static 'images/shapes/blog-1-1.png' %}" alt>
-            </div>
-            <div class="blog-two__element-two">
-                <img src="{% static 'images/shapes/blog-1-2.png' %}" alt>
-            </div>
-        </section>
-        <!-- Blog Section End -->
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- Blog Section End -->
 
 {% endblock content %}
 
 
-asdf msdfjjj j  

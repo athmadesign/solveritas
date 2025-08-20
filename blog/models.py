@@ -20,7 +20,7 @@ class BlogCategory(models.Model):
 class BlogPost(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True, blank=True)
-    content = RichTextUploadingField()
+    content = RichTextUploadingField(help_text="keep the image width 850px")
     author = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     featured_image = models.ImageField(upload_to='blog/', blank=True, null=True, help_text="Size: 340pxX400px")

@@ -5,7 +5,19 @@
 {% block title %}Case{% endblock title %}
 
 {% block content %}
-
+<section class="page-header">
+            <div class="page-header__bg" style="background-image: url({% static "images/backgrounds/page-header-bg-1-1.jpg" %});"></div>
+            
+            <div class="container">
+                <h2 class="page-header__title">Case</h2>
+                <div class="solveritas-breadcrumb">
+                    <ul class="solveritas-breadcrumb__list list-unstyled">
+                        <li class="solveritas-breadcrumb__list__item"><a href="{% url "home" %}">Home</a></li>
+                        <li class="solveritas-breadcrumb__list__item"><span>Case</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
 
 {% endblock content %}

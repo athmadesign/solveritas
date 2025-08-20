@@ -10,7 +10,7 @@
             <div class="page-header__bg" style="background-image: url({% static "images/backgrounds/page-header-bg-1-1.jpg" %});"></div>
             
             <div class="container">
-                <h2 class="page-header__title">blog grid</h2>
+                <h2 class="page-header__title">blog</h2>
                 <div class="solveritas-breadcrumb">
                     <ul class="solveritas-breadcrumb__list list-unstyled">
                         <li class="solveritas-breadcrumb__list__item"><a href="{% url "home" %}">Home</a></li>
@@ -24,24 +24,22 @@
             <div class="container">
                 <div class="row gutter-y-30">
                     {% for blog in blogs %}
-                        <div class="col-md-6 col-lg-4">
-                        <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
-                            <div class="blog-card__image">
-                                <a href="{% url "blog_detail" blog.slug %}" class="blog-card__image__item">
-                                    <img src="{{ blog.featured_image.url }}" alt="{{blog.title}}">
-                                </a>
-                                
-                            </div>
-                            <div class="blog-card__content">
-                                <h3 class="blog-card__title"><a href="{% url "blog_detail" blog.slug %}">{{ blog.title }}</a></h3>
-                                <ul class="blog-card__meta list-unstyled">
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by {{ blog.author }}</a></li>
-                                    <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-comments-icon"></i>2 Comments</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
+<div class="col-md-6 col-lg-4">
+    <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
+        <div class="blog-card__image">
+            <a href="{% url 'blog_detail' blog.slug %}" class="blog-card__image__item">
+                <img src="{{ blog.featured_image.url }}" alt="{{ blog.title }}" class="blog-thumbnail">
+            </a>
+        </div>
+        <div class="blog-card__content">
+            <h3 class="blog-card__title"><a href="{% url 'blog_detail' blog.slug %}">{{ blog.title }}</a></h3>
+            <ul class="blog-card__meta list-unstyled">
+                <li class="blog-card__meta__item"><a href="blog-details.html"><i class="icon-user"></i>by {{ blog.author }}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endfor %}
                     
                     <div class="col-12">
                         <ul class="post-pagination list-unstyled justify-content-center">
