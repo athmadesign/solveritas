@@ -31,19 +31,20 @@
                                                 <i class="icon-telephone"></i>
                                             </div>
                                             <div class="main-footer__top__content">
-                                                <span class="main-footer__top__title">call agent</span>
-                                                <a href="tel:+91-123-654-900">+91 123 654 900</a>
+                                                <span class="main-footer__top__title">contact us</span>
+                                                <a href="tel:+91-999-567-7916">+91 999 567 7916</a>
                                             </div>
                                         </li>
                                         <li class="main-footer__top__list__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
-                                            <div class="main-footer__top__icon">
-                                                <i class="icon-clock"></i>
-                                            </div>
-                                            <div class="main-footer__top__content">
-                                                <span class="main-footer__top__title">opening time</span>
-                                                <p>Hours: Mon-Fri: 8am – 7pm</p>
-                                            </div>
-                                        </li>
+    <div class="main-footer__top__icon">
+        <i class="icon-pin"></i> <!-- Replace with location/map icon -->
+    </div>
+    <div class="main-footer__top__content">
+        <span class="main-footer__top__title">Location</span>
+        <p>Yiwu City, Zhejiang Province, China</p> <!-- Change to your address -->
+    </div>
+</li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -57,7 +58,7 @@
                         <div class="col-xl-3 col-lg-4 col-md-6">
                             <div class="footer-widget wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
                                 <h4 class="footer-widget__title">about <span>solveritas</span></h4>
-                                <p class="footer-widget__text">There are two main types: solar photovoltaic (PV) systems for electricity generation and</p>
+                                <p class="footer-widget__text">Solveritas delivers sustainable and reliable solar energy solutions for a brighter future.</p>
                                 
                             </div>
                         </div>
@@ -90,7 +91,7 @@
                                 <p class="footer-widget__text">Follow our social media pages for updates, events, and exclusive stories</p>
                                 <div class="footer-widget__social">
                                     <a href="http://facebook.com/profile.php?id=61579244730084" target='_blank'><i class="icon-facebook" aria-hidden="true"></i></a>
-                                    <a href="https://x.com/Solveritassolar" target='_blank'><i class="icon-twitter" aria-hidden="true"></i></a>
+                                    <a href="https://x.com/Solveritassolar" target='_blank'><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
                                     <a href="https://www.instagram.com/solveritasglobalsolar?igsh=M2t5cDBjc3RqMmc5" target='_blank'><i class="icon-social-media" aria-hidden="true"></i></a>
                                     <a href="http://youtube.com/@solveritasglobal" target='_blank'><i class="icon-youtube" aria-hidden="true"></i></a>
                                 </div>
@@ -104,7 +105,16 @@
             <div class="main-footer__bottom">
                 <div class="container">
                     <div class="main-footer__bottom__inner">
-                        <p class="main-footer__copyright"> © Copyright <span class="dynamic-year">2024</span> by solveritas HTML Template.</p>
+                        {% comment %} <p class="main-footer__copyright"> Copyright © {% now "Y" %} All Rights Reserved by <a href="https://athmaproductions.in" style="color: #60ac45" target="_blank" rel="noopener noreferrer">Athma Productions</a></p> {% endcomment %}
+                        <p class="main-footer__copyright"> Copyright © {% now "Y" %} All Rights Reserved by 
+                            <span class="d-none d-sm-inline">
+                                <a href="https://athmaproductions.in" style="color: #60ac45" target="_blank" rel="noopener noreferrer">Athma Productions</a>
+                            </span> 
+                            <br class="d-block d-sm-none" />
+                            <span class="d-block d-sm-none mt-2">
+                                <a href="https://athmaproductions.in" style="color: #60ac45" target="_blank" rel="noopener noreferrer">Athma Productions</a>
+                            </span>
+                        </p>
                     </div>
                 </div>
             </div>

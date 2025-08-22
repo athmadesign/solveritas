@@ -25,8 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DEBUG", default=True, cast=bool)
+# DEBUG = config("DEBUG", default=True, cast=bool)
 
+# ALLOWED_HOSTS = ["solveritasglobal.com", "www.solveritasglobal.com"]
+
+DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 

@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from django.http import Http404
 
-handler404 = 'core.views.custom_404_view'
+
 
 urlpatterns = [
     path('', views.home, name='home'),

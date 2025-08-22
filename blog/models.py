@@ -3,8 +3,8 @@ from django.utils.text import slugify
 from ckeditor_uploader.fields import RichTextUploadingField
 
 class BlogCategory(models.Model):
-    name = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(unique=True, blank=True)
+    name = models.CharField(max_length=300, unique=True)
+    slug = models.SlugField(unique=True, blank=True, max_length=300)
 
     class Meta:
         verbose_name_plural = "Categories"

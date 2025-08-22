@@ -1,13 +1,15 @@
 from django.shortcuts import render
 from . models import Slider
 from blog.models import BlogPost
+from products.models import Product
 
 # Create your views here.
 
 def home(request):
     sliders = Slider.objects.filter(is_active=True).order_by('order')
     latest_blogs = BlogPost.objects.order_by('created_at')[:3]
-    context = { 'sliders' : sliders, 'latest_blogs':latest_blogs}
+    featured_products = Product.objects.filter(is_active=True)[:8]  # Show 8 products
+    context = { 'sliders' : sliders, 'latest_blogs':latest_blogs, 'featured_products': featured_products}
     return render(request, 'core/index.html', context)
 
 def about(request):

@@ -29,20 +29,15 @@
                                 <div class="col-lg-9">
                                     <div class="main-slider-one__content">
                                         <h5 class="main-slider-one__sub-title"> future of solar energy
-                                            <span class="main-slider-one__sub-title__line-group">
-                                                <span class="main-slider-one__sub-title__line main-slider-one__sub-title__line--1"></span>
-                                                <span class="main-slider-one__sub-title__line main-slider-one__sub-title__line--2"></span>
-                                                <span class="main-slider-one__sub-title__line main-slider-one__sub-title__line--3"></span>
-                                                <span class="main-slider-one__sub-title__line main-slider-one__sub-title__line--4"></span>
-                                            </span>
+                                            
                                         </h5>
                                         <h2 class="main-slider-one__title">{{ slider.title }}
                                             
                                         </h2>
                                         <p class="main-slider-one__text">{{ slider.subtitle }}</p>
                                         <div class="main-slider-one__btn">
-                                            <a href="services.html" class="solveritas-btn solveritas-btn--base">our services <i class="icon-arrow-point-to-right"></i></a>
-                                            <a href="services.html" class="solveritas-btn">get a quote <i class="icon-arrow-point-to-right"></i></a>
+                                            <a href="{% url "products" %}" class="solveritas-btn solveritas-btn--base">our products <i class="icon-arrow-point-to-right"></i></a>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -56,6 +51,65 @@
             </div>
         </section>
         <!-- main-slider-end -->
+
+        <!-- Featured Products Section -->
+<section class="featured-products">
+    <div class="container">
+        <div class="sec-title text-center wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="sec-title__icon icon-solar-panel"></i>
+                        <h6 class="sec-title__tagline"> Products</h6>
+                    </div>
+                    <h3 class="sec-title__title">our Products</h3>
+                </div>
+        
+        <div class="row">
+            {% for product in featured_products %}
+            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="product__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                                    <div class="product__item__img">
+                                        <div class="product__item__img__item">
+                                            <img src="{{ product.image.url }}" alt="{{product.name}}">
+                                        </div>
+                                        <div class="product__item__btn">
+                                            <a href="#"><i class="far fa-heart"></i></a>
+                                            <a href="{% url "product-detail" product.slug %}"><i class="fas fa-eye"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="product__item__content">
+                                        <div class="product__item__ratings">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <h4 class="product__item__title"><a href="{% url "product-detail" product.slug %}">{{ product.name }}</a></h4>
+                                        <div class="product__item__price">${{ product.price }}</div>
+
+                                        <a href="{% url "product-detail" product.slug %}" class="solveritas-btn solveritas-btn--base product__item__link">View Item
+                                        </a>
+                                    </div>
+                                </div>
+                            </div><!-- /.col-md-6 col-lg-4 -->
+            
+            {% empty %}
+            <div class="col-12 text-center">
+                <p class="no-products">No products available at the moment.</p>
+            </div>
+            {% endfor %}
+        </div>
+        
+        {% if featured_products %}
+        <div class="text-center wow fadeInUp" style="margin-top: 50px;" data-wow-duration='1500ms' data-wow-delay='500ms'>
+            <a href="{% url 'products' %}" class="solveritas-btn solveritas-btn--base mt-10">
+                View All Products
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</section>
 
         <!-- About Section Start -->
         <section class="about-one">
@@ -98,7 +152,7 @@
 
         <!-- Service Section Start -->
         <section class="service-one">
-            <div class="service-one__bg jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% -100%" style="background-image: url({% static 'images/backgrounds/service-bg-1-1.png' %});"></div>
+            <div class="service-one__bg jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% -100%" style="background-image: url({% static 'images/backgrounds/service-bg-1-1.jpg' %});"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9">
@@ -156,8 +210,8 @@
                                     <img src="{% static 'images/service/service-2-1.jpg' %}" alt="image">
                                 </div>
                                 <div class="service-one__content">
-                                    <h4 class="service-one__content__title"><a href="service-d-energy-panels.html">Solar Panels Services</a></h4>
-                                    <p class="service-one__content__text">the capital required to establish and scale-up wafer, solar cell and solar module manufacturing </p>
+                                    <h4 class="service-one__content__title"><a href="service-d-energy-panels.html">Solar Panel Installation</a></h4>
+                                    <p class="service-one__content__text">Professional setup for homes, businesses, and industries </p>
                                 </div>
                                 <div class="service-one__btn">
                                     <a href="service-d-energy-panels.html" class="service-one__btn__link"><span>service details</span> <i class="icon-arrow-point-to-right"></i></a>
@@ -171,8 +225,8 @@
                                     <img src="{% static 'images/service/service-2-2.jpg' %}" alt="image">
                                 </div>
                                 <div class="service-one__content">
-                                    <h4 class="service-one__content__title"><a href="service-d-solar-service.html">Turbines Services</a></h4>
-                                    <p class="service-one__content__text">the capital required to establish and scale-up wafer, solar cell and solar module manufacturing </p>
+                                    <h4 class="service-one__content__title"><a href="service-d-solar-service.html">Rooftop Solar Solutions</a></h4>
+                                    <p class="service-one__content__text">Customized solar systems for residential and commercial rooftops </p>
                                 </div>
                                 <div class="service-one__btn">
                                     <a href="service-d-solar-service.html" class="service-one__btn__link"><span>service details</span> <i class="icon-arrow-point-to-right"></i></a>
@@ -186,8 +240,8 @@
                                     <img src="{% static 'images/service/service-2-3.jpg' %}" alt="image">
                                 </div>
                                 <div class="service-one__content">
-                                    <h4 class="service-one__content__title"><a href="service-d-hydropower-plants.html">Hydropower Plants</a></h4>
-                                    <p class="service-one__content__text">the capital required to establish and scale-up wafer, solar cell and solar module manufacturing </p>
+                                    <h4 class="service-one__content__title"><a href="service-d-hydropower-plants.html">Solar Battery Solutions</a></h4>
+                                    <p class="service-one__content__text">Backup and storage systems for uninterrupted power </p>
                                 </div>
                                 <div class="service-one__btn">
                                     <a href="service-d-hydropower-plants.html" class="service-one__btn__link"><span>service details</span> <i class="icon-arrow-point-to-right"></i></a>
@@ -195,21 +249,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="service-one__item">
-                                <div class="service-one__thumb">
-                                    <img src="{% static 'images/service/service-2-4.jpg' %}" alt="image">
-                                </div>
-                                <div class="service-one__content">
-                                    <h4 class="service-one__content__title"><a href="service-d-thermo-stone.html">Fossil Resources</a></h4>
-                                    <p class="service-one__content__text">the capital required to establish and scale-up wafer, solar cell and solar module manufacturing </p>
-                                </div>
-                                <div class="service-one__btn">
-                                    <a href="service-d-thermo-stone.html" class="service-one__btn__link"><span>service details</span> <i class="icon-arrow-point-to-right"></i></a>
-                                    <a href="service-d-thermo-stone.html" class="service-one__btn__link service-one__btn__link--hover"><i class="icon-arrow-point-to-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="item">
                             <div class="service-one__item">
                                 <div class="service-one__thumb">
@@ -217,7 +257,7 @@
                                 </div>
                                 <div class="service-one__content">
                                     <h4 class="service-one__content__title"><a href="service-d-energy-panels.html">Solar Panels Services</a></h4>
-                                    <p class="service-one__content__text">the capital required to establish and scale-up wafer, solar cell and solar module manufacturing </p>
+                                    <p class="service-one__content__text">End-to-end large-scale solar energy projects </p>
                                 </div>
                                 <div class="service-one__btn">
                                     <a href="service-d-energy-panels.html" class="service-one__btn__link"><span>service details</span> <i class="icon-arrow-point-to-right"></i></a>
@@ -225,44 +265,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="service-one__item">
-                                <div class="service-one__thumb">
-                                    <img src="{% static 'images/service/service-2-2.jpg' %}" alt="image">
-                                </div>
-                                <div class="service-one__content">
-                                    <h4 class="service-one__content__title"><a href="service-d-solar-service.html">Turbines Services</a></h4>
-                                    <p class="service-one__content__text">the capital required to establish and scale-up wafer, solar cell and solar module manufacturing </p>
-                                </div>
-                                <div class="service-one__btn">
-                                    <a href="service-d-solar-service.html" class="service-one__btn__link"><span>service details</span> <i class="icon-arrow-point-to-right"></i></a>
-                                    <a href="service-d-solar-service.html" class="service-one__btn__link service-one__btn__link--hover"><i class="icon-arrow-point-to-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="service-one__item">
-                                <div class="service-one__thumb">
-                                    <img src="{% static 'images/service/service-2-3.jpg' %}" alt="image">
-                                </div>
-                                <div class="service-one__content">
-                                    <h4 class="service-one__content__title"><a href="service-d-hydropower-plants.html">Hydropower Plants</a></h4>
-                                    <p class="service-one__content__text">the capital required to establish and scale-up wafer, solar cell and solar module manufacturing </p>
-                                </div>
-                                <div class="service-one__btn">
-                                    <a href="service-d-hydropower-plants.html" class="service-one__btn__link"><span>service details</span> <i class="icon-arrow-point-to-right"></i></a>
-                                    <a href="service-d-hydropower-plants.html" class="service-one__btn__link service-one__btn__link--hover"><i class="icon-arrow-point-to-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="item">
                             <div class="service-one__item">
                                 <div class="service-one__thumb">
                                     <img src="{% static 'images/service/service-2-4.jpg' %}" alt="image">
                                 </div>
                                 <div class="service-one__content">
-                                    <h4 class="service-one__content__title"><a href="service-d-thermo-stone.html">Fossil Resources</a></h4>
-                                    <p class="service-one__content__text">the capital required to establish and scale-up wafer, solar cell and solar module manufacturing </p>
+                                    <h4 class="service-one__content__title"><a href="service-d-thermo-stone.html">Hybrid & Off-Grid Systems</a></h4>
+                                    <p class="service-one__content__text">Reliable power solutions in remote and rural areas </p>
                                 </div>
                                 <div class="service-one__btn">
                                     <a href="service-d-thermo-stone.html" class="service-one__btn__link"><span>service details</span> <i class="icon-arrow-point-to-right"></i></a>
@@ -333,13 +344,13 @@
 
         <!-- FAQS Section Start -->
         <section class="faqs-two">
-            <div class="faqs-two__bg" style="background-image: url({% static 'images/shapes/faqs-shape-1-1.png' %});"></div>
+            {% comment %} <div class="faqs-two__bg" style="background-image: url({% static 'images/shapes/faqs-shape-1-1.png' %});"></div> {% endcomment %}
             <div class="container">
                 <div class="row gutter-y-30">
                     <div class="col-lg-6">
                         <div class="faqs-two__thumb faqs-two__thumb--two wow fadeInLeft" data-wow-duration='1500ms' data-wow-delay='300ms'>
                             <div class="faqs-two__thumb__item">
-                                <img src="{% static 'images/resources/faq-1-1.png' %}" alt="solveritas image">
+                                <img src="{% static 'images/resources/faq-1-1.jpg' %}" alt="solveritas image" >
                             </div>
                             
                         </div>
@@ -450,13 +461,13 @@
                                 </div>
                                 <div class="project-card__hover">
                                     <div class="project-card__content">
-                                        <span class="project-card__dec">solar energy</span>
-                                        <h3 class="project-card__title"><a href="project-details.html">Solar Energy system</a></h3>
+                                        <span class="project-card__dec">solar service</span>
+                                        <h3 class="project-card__title"><a href="project-details.html">Residential Projects</a></h3>
 
                                     </div>
-                                    <a href="project-details.html" class="project-card__content__icon">
+                                    {% comment %} <a href="project-details.html" class="project-card__content__icon">
                                         <span class="project-card__content__icon__item"></span>
-                                    </a>
+                                    </a> {% endcomment %}
                                 </div>
                             </div>
                         </div>
@@ -467,13 +478,13 @@
                                 </div>
                                 <div class="project-card__hover">
                                     <div class="project-card__content">
-                                        <span class="project-card__dec">solar energy</span>
-                                        <h3 class="project-card__title"><a href="project-details.html">Solar Energy system</a></h3>
+                                        <span class="project-card__dec">solar service</span>
+                                        <h3 class="project-card__title"><a href="project-details.html">Commercial Projects</a></h3>
 
                                     </div>
-                                    <a href="project-details.html" class="project-card__content__icon">
+                                    {% comment %} <a href="project-details.html" class="project-card__content__icon">
                                         <span class="project-card__content__icon__item"></span>
-                                    </a>
+                                    </a> {% endcomment %}
                                 </div>
                             </div>
                         </div>
@@ -484,13 +495,13 @@
                                 </div>
                                 <div class="project-card__hover">
                                     <div class="project-card__content">
-                                        <span class="project-card__dec">solar energy</span>
-                                        <h3 class="project-card__title"><a href="project-details.html">Solar Energy system</a></h3>
+                                        <span class="project-card__dec">solar service</span>
+                                        <h3 class="project-card__title"><a href="project-details.html">Industrial & Community Projects</a></h3>
 
                                     </div>
-                                    <a href="project-details.html" class="project-card__content__icon">
+                                    {% comment %} <a href="project-details.html" class="project-card__content__icon">
                                         <span class="project-card__content__icon__item"></span>
-                                    </a>
+                                    </a> {% endcomment %}
                                 </div>
                             </div>
                         </div>
@@ -501,84 +512,18 @@
                                 </div>
                                 <div class="project-card__hover">
                                     <div class="project-card__content">
-                                        <span class="project-card__dec">solar energy</span>
-                                        <h3 class="project-card__title"><a href="project-details.html">Solar Energy system</a></h3>
+                                        <span class="project-card__dec">solar service</span>
+                                        <h3 class="project-card__title"><a href="project-details.html">Institutional Projects</a></h3>
 
                                     </div>
-                                    <a href="project-details.html" class="project-card__content__icon">
+                                    {% comment %} <a href="project-details.html" class="project-card__content__icon">
                                         <span class="project-card__content__icon__item"></span>
-                                    </a>
+                                    </a> {% endcomment %}
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="project-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
-                                <div class="project-card__image">
-                                    <img src="{% static 'images/service/service-3-1.jpg' %}" alt="@@name">
-                                </div>
-                                <div class="project-card__hover">
-                                    <div class="project-card__content">
-                                        <span class="project-card__dec">solar energy</span>
-                                        <h3 class="project-card__title"><a href="project-details.html">Solar Energy system</a></h3>
-
-                                    </div>
-                                    <a href="project-details.html" class="project-card__content__icon">
-                                        <span class="project-card__content__icon__item"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="project-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
-                                <div class="project-card__image">
-                                    <img src="{% static 'images/service/service-3-2.jpg' %}" alt="@@name">
-                                </div>
-                                <div class="project-card__hover">
-                                    <div class="project-card__content">
-                                        <span class="project-card__dec">solar energy</span>
-                                        <h3 class="project-card__title"><a href="project-details.html">Solar Energy system</a></h3>
-
-                                    </div>
-                                    <a href="project-details.html" class="project-card__content__icon">
-                                        <span class="project-card__content__icon__item"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="project-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
-                                <div class="project-card__image">
-                                    <img src="{% static 'images/service/service-3-3.jpg' %}" alt="@@name">
-                                </div>
-                                <div class="project-card__hover">
-                                    <div class="project-card__content">
-                                        <span class="project-card__dec">solar energy</span>
-                                        <h3 class="project-card__title"><a href="project-details.html">Solar Energy system</a></h3>
-
-                                    </div>
-                                    <a href="project-details.html" class="project-card__content__icon">
-                                        <span class="project-card__content__icon__item"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="project-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
-                                <div class="project-card__image">
-                                    <img src="{% static 'images/service/service-3-4.jpg' %}" alt="@@name">
-                                </div>
-                                <div class="project-card__hover">
-                                    <div class="project-card__content">
-                                        <span class="project-card__dec">solar energy</span>
-                                        <h3 class="project-card__title"><a href="project-details.html">Solar Energy system</a></h3>
-
-                                    </div>
-                                    <a href="project-details.html" class="project-card__content__icon">
-                                        <span class="project-card__content__icon__item"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -644,7 +589,7 @@
                 </div>
             </div>
         </div>
-        
+{% comment %}         
         <!-- Testimonials Section Start -->
         <section class="testimonial-one">
             <div class="testimonial-one__bg jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% -100%" style="background-image: url({% static 'images/backgrounds/testimonial-bg-1-1.png' %});"></div>
@@ -935,7 +880,7 @@
                 </div>
             </div>
         </section>
-        <!-- Testimonials Section End -->
+        <!-- Testimonials Section End --> {% endcomment %}
 
         
 
@@ -977,6 +922,11 @@
             </div>
             {% endfor %}
         </div>
+        <div class="text-center mt-5">
+    <a href="{% url 'blog' %}" class="solveritas-btn solveritas-btn--base">
+        View All Blogs
+    </a>
+</div>
     </div>
 </section>
 <!-- Blog Section End -->
