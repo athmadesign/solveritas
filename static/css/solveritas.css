@@ -58,7 +58,7 @@
   --solveritas-text-dark-rgb: 32, 34, 32;
   --solveritas-text-dark2: #1E2436;
   --solveritas-text-dark2-rgb: 30, 36, 54;
-  --solveritas-base: #60AC45;
+  --solveritas-base: #7eb655;
   --solveritas-base-rgb: 96, 172, 69;
   --solveritas-white: #fff;
   --solveritas-white-rgb: 255, 255, 255;
@@ -7480,11 +7480,16 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .product__item__img img {
   text-align: center;
-  width: auto !important;
+  max-width: 100%;   /* Don’t let it overflow horizontally */
+  max-height: 250px; /* Adjust based on your design */
+  height: auto;
+  width: auto;
   mix-blend-mode: multiply;
   transition: all 500ms ease;
   transform: scale(1);
+  object-fit: contain; /* Keeps aspect ratio inside the box */
 }
+
 .product__item__btn {
   position: absolute;
   right: 20px;

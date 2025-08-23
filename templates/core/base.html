@@ -115,8 +115,8 @@
                                 <i class="icon-email"></i>
                             </div>
                             <div class="header-right-sidebar__container__list__content">
-                                <span class="header-right-sidebar__container__list__title">send email</span>
-                                <a href="#">solveritasglobal@gmail.com</a>
+                                <span class="header-right-sidebar__container__list__title">email us</span>
+                                <a href="mailto:solveritasglobal@gmail.com">solveritasglobal@gmail.com</a>
                             </div>
                         </li>
                         <li class="header-right-sidebar__container__list__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
@@ -124,7 +124,7 @@
                                 <i class="icon-telephone"></i>
                             </div>
                             <div class="header-right-sidebar__container__list__content">
-                                <span class="header-right-sidebar__container__list__title">call agent</span>
+                                <span class="header-right-sidebar__container__list__title">contact us</span>
                                 <a href="tel:+91-999-567-7916">+91 999 567 7916</a>
                             </div>
                         </li>
@@ -160,11 +160,11 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@solveritas.com">needhelp@solveritas.com</a>
+                    <a href="mailto:solveritasglobal@gmail.com">solveritasglobal@gmail.com</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:+91-999-567-7916">+91 999 567 7916</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__social">
@@ -199,21 +199,21 @@
         <span>CONTACT US</span>
     </div>
     <div id="contact-panel">
-        <a href="tel:+8613788918712" class="contact-item">
+        <a href="tel: +8617889468403" class="contact-item">
             <i class="fab fa-weixin"></i> WeChat 
         </a>
 
-        <a href="mailto:jane@chnland-solar.com" class="contact-item">
+        <a href="mailto:solveritasglobal@gmail.com" class="contact-item">
             <i class="fas fa-envelope"></i> Email
         </a>
         <a href="skype:live:your_skype_id?chat" class="contact-item">
             <i class="fab fa-skype"></i> Skype
         </a>
         
-        <a href="#" class="contact-item">
+        {% comment %} <a href="#" class="contact-item">
             <i class="fab fa-qq"></i> QQ
-        </a>
-        <a href="https://wa.me/917356568224" target="_blank" class="contact-item">
+        </a> {% endcomment %}
+        <a href="https://wa.me/919995677916" target="_blank" class="contact-item">
             <i class="fab fa-whatsapp"></i> WhatsApp
             <div class="qr-popup">
                 <img src="{% static "whatsapp-qr.png" %}" alt="WhatsApp QR">
@@ -309,7 +309,7 @@ document.getElementById('whatsappForm').addEventListener('submit', function(e) {
     let message = document.getElementById('message').value;
 
     let fullMessage = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0A%0AMessage:%0A${message}`;
-    let whatsappURL = `https://wa.me/917356568224?text=${fullMessage}`;
+    let whatsappURL = `https://wa.me/919995677916?text=${fullMessage}`;
 
     window.open(whatsappURL, '_blank');
 });
