@@ -21,6 +21,36 @@
             </div>
         </section>
 
+        <div class="container py-5">
+  {% comment %} <h2 class="mb-4 text-center">📂 Downloads</h2> {% endcomment %}
+  <div class="sec-title text-center wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <img src="{% static 'images/Green_Icon.png' %}" alt="Products Icon" class="me-2" style="width:20px; height:20px; object-fit:contain;"/>
+                        <h6 class="sec-title__tagline mb-0">downloads</h6>
+                    </div>
+                    <h3 class="sec-title__title">Downloads</h3>
+                </div>
+  <div class="row">
+    {% for file in files %}
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-lg h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ file.title }}</h5>
+            <p class="card-text">{{ file.description|truncatewords:20 }}</p>
+            <a href="{{ file.file.url }}" class="btn btn-success" download>
+              ⬇ Download
+            </a>
+          </div>
+          <div class="card-footer text-muted">
+            Uploaded on {{ file.uploaded_at|date:"d M Y" }}
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p class="text-center">No files available for download yet.</p>
+    {% endfor %}
+  </div>
+</div>
         
 
 {% endblock content %}

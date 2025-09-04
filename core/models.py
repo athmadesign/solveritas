@@ -10,3 +10,17 @@ class Slider(models.Model):
 
     def __str__(self):
         return self.title if self.title else f"Slide {self.id}"
+
+
+class Testimonial(models.Model):
+    name = models.CharField(max_length=100)  # Person's name
+    designation = models.CharField(max_length=100, blank=True, null=True)  # Job title or role
+    message = models.TextField()  # Testimonial text
+    photo = models.ImageField(upload_to="testimonials/", blank=True, null=True)  # Optional image
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']  # Latest first
+
+    def __str__(self):
+        return f"{self.name} - {self.designation or 'Customer'}"
